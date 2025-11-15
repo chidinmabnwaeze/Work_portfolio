@@ -50,7 +50,7 @@ const About = () => {
               <Briefcase />
             </button>
 
-            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:">
+            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 hover:text-white transition transform hover:scale-105">
               Download CV
               <Download />
             </button>
