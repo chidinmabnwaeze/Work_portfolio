@@ -1,6 +1,7 @@
 import ProfilePic from "../assets/Chi blue outfit.jpg";
 import { ArrowUpRight } from "lucide-react";
 import About from "./About";
+import Project from "./Project";
 
 interface HomeProps {
   heading: string;
@@ -38,6 +39,7 @@ const Home = () => {
         </section>
       </main>
       <About />
+      <Project />
     </>
   );
 };
