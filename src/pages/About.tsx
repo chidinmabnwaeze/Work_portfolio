@@ -1,4 +1,4 @@
-import aboutimg from "../assets/WhatsApp Image 2025-11-17 at 13.03.57_b6a1b2a0.jpg";
+import aboutimg from "../assets/images/WhatsApp Image 2025-11-17 at 13.03.57_b6a1b2a0.jpg";
 import { Download, Briefcase } from "lucide-react";
 
 type Metrics = {
@@ -14,7 +14,7 @@ const About = () => {
   return (
     <main className="flex flex-col justify-center items-center m-15">
       <p>Get to know me</p>
-      <hr />
+     {/* <span className="bg-fuchsia-950 w-20 h-0.5 mt-2">.</span> */}
       <h1 className="font-bold text-4xl">About Me</h1>
       <div className="flex gap-10 my-10">
         <section className=" w-full">
