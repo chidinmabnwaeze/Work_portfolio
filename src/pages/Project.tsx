@@ -18,7 +18,7 @@ const projects: ProjectProps[] = [
 ];
 const Project = ({ id, title, description, imageUrl }: ProjectProps) => {
   return (
-    <main className="flex flex-col justify-center items-center m-15">
+    <main className="flex flex-col justify-center items-center m-15 bg-black p-20 text-white">
       <p>Here are some of my projects</p>
       <h1 className="font-bold text-4xl">Projects</h1>
       <section>
