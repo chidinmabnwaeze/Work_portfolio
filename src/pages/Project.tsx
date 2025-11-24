@@ -22,7 +22,7 @@ const Project = ({ id, title, description, imageUrl }: ProjectProps) => {
       <p>Here are some of my projects</p>
       <h1 className="font-bold text-4xl">Projects</h1>
       <section>
-        <div className="project-list flex flex-wrap justify-center gap-10 my-10">
+        <div className="project-list flex flex-wrap justify-center gap-10 my-10 text-black">
           {/* Project Item 1 */}
           {projects.map((project, index) => (
             <div

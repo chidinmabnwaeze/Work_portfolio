@@ -1,4 +1,4 @@
-import ProfilePic from "../assets/images/Chi blue outfit.jpg";
+import ProfilePic from "../assets/images/chi pic 1.jpg";
 import { ArrowUpRight } from "lucide-react";
 import About from "./About";
 import Project from "./Project";

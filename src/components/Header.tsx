@@ -1,3 +1,5 @@
+import logo from "../assets/images/WhatsApp Image 2025-11-17 at 13.03.58_b066d80d.jpg"
+
 type HeaderType = {
   name: string;
 };
@@ -14,9 +16,9 @@ const Header = ({ name }: HeaderType) => {
   ];
   return (
     <main className="flex justify-between items-center shadow p-4">
-      <div className="ml-6">
-        {/* <img src="" alt="" /> */}
-        <h1 className="text-2xl font-bold">{name}</h1>
+      <div className="ml-6 flex items-center gap-4">
+        <img src={logo}alt="logo" className="w-16 h-16 object-cover rounded-full" />
+        <h1 className="text-2xl font-bold text-fuchsia-950">{name}</h1>
       </div>
 
       <nav className="m-5">
