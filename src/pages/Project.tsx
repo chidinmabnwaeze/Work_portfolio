@@ -25,21 +25,21 @@ const Project = ({ id, title, description, imageUrl }: ProjectProps) => {
         <div className="project-list flex flex-wrap justify-center gap-10 my-10 text-black">
           {/* Project Item 1 */}
           {projects.map((project, index) => (
-            <div
-              className="project-item bg-white rounded-lg shadow-lg p-6 flex "
+            <section
+              className="project-item bg-white rounded-lg shadow-lg p-6 flex"
               key={index}
             >
-              <div className="m-8">
-              <p>{project.id}</p>
-              <h1>{project.title}</h1>
+              <div className="m-8 flex flex-col justify-center">
+              <p className="bg-fuchsia-950 rounded-full w-16 h-16 text-center p-5 text-white">{project.id}</p>
+              <h1 className="text-2xl py-5">{project.title}</h1>
                 <p>{project.description}</p>
-                <button>View Project</button>
+                <button className="p-4 my-6 max-w-2xs text-white rounded bg-fuchsia-950 hover:bg-p">View Project</button>
               </div>
 
               <div className="max-w-200">
                 <img src={img1}alt="Project image" />
               </div>
-            </div>
+            </section>
           ))}
         </div>
       </section>
