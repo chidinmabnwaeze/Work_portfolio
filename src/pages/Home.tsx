@@ -8,7 +8,21 @@ interface HomeProps {
   subText: string;
 }
 
+// import React from 'react';
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+// const App = () => {
+//   return (
+//     <DotLottieReact
+//       src="https://lottie.host/48743c51-ce31-44c0-86de-a0592ee3ae2d/dj6cWEaV1e.lottie"
+//       loop
+//       autoplay
+//     />
+//   );
+// };
+
 const Home = () => {
+
   return (
     <>
       <main className="hero flex justify-center gap-30 p-10 h-screen bg-blend-darken bg-fuchsia-950 text-white items-center">
