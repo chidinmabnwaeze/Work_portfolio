@@ -8,6 +8,8 @@ type Metrics = {
 const metrics: Metrics[] = [
   { figure: 3, name: "Organizations" },
   { figure: 5, name: "Projects" },
+  { figure: 6, name: "Testimonials" },
+  // { figure: 90, name: "Satisfactory Rate" },
 ];
 
 const About = () => {
@@ -33,7 +35,7 @@ const About = () => {
           </span>
           <div className="metrics flex justify-center gap-10 mt-10">
             {metrics.map((item, index) => (
-              <div key={index} className="mb-4">
+              <div key={index} className="mb-4 text-center">
                 <h2 className="text-3xl font-bold text-purple-600">
                   {item.figure}+
                 </h2>
