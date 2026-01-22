@@ -5,8 +5,12 @@
   font-family: "Nunito", sans-serif;
 }
 .hero {
-  background-image: url('./assets/OQCI8I0.jpg');
+  background-image: url('./assets/images/OQCI8I0.jpg');
   background-size: cover;
+}
+.chidinma, .hi{
+font-family: "Rochester", cursive;
+font-weight: bold;
 }
 
 /* .p_card{

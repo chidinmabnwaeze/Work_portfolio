@@ -1,7 +1,8 @@
-import ProfilePic from "../assets/Chi blue outfit.jpg";
+import ProfilePic from "../assets/images/chi pic 1.jpg";
 import { ArrowUpRight } from "lucide-react";
 import About from "./About";
 import Project from "./Project";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 interface HomeProps {
   heading: string;
@@ -13,7 +14,15 @@ const Home = () => {
     <>
       <main className="hero flex justify-center gap-30 p-10 h-screen bg-blend-darken bg-fuchsia-950 text-white items-center">
         <section>
-          <p className="text-shadow text-xl">Hi There ...</p>
+          <span className="text-shadow text-xl flex items-center gap-4">
+            <p className="hi text-2xl">Hi There ...</p>
+            <DotLottieReact
+              src="https://lottie.host/48743c51-ce31-44c0-86de-a0592ee3ae2d/dj6cWEaV1e.lottie"
+              loop
+              autoplay
+              style={{ width: "80px", height: "80px" }}
+            />
+          </span>
           <h1 className="text-6xl font-bold mt-10">Welcome To My Portfolio</h1>
           <h2 className="italic">
             A Frontend Developer Crafting Engaging Web Experiences
@@ -26,7 +35,7 @@ const Home = () => {
           <span>
             <img src="" alt="" />
           </span> */}
-          <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2">
+          <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition transform hover:scale-105 font-bold">
             Contact Me <ArrowUpRight />
           </button>
         </section>
