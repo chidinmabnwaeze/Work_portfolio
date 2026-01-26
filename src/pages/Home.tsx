@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import About from "./About";
 import Project from "./Project";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Skills from "./Skills";
 
 interface HomeProps {
   heading: string;
@@ -49,6 +50,7 @@ const Home = () => {
       </main>
       <About />
       <Project />
+      <Skills/>
     </>
   );
 };
