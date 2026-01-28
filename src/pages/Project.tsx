@@ -27,10 +27,16 @@ export default function Project<Projects>() {
       name: "EDUPROTOS",
       description: "",
     },
-    {
-      img: "",
+ {
+      img: project1,
       name: "EDUPROTOS",
-      description: "",
+      description:
+        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+      skills: [
+        {
+          skill: next,
+        },
+      ],
     },
   ];
 
