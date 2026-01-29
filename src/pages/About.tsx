@@ -20,8 +20,8 @@ const About = () => {
       <h1 className="font-bold text-4xl">About Me</h1>
       <div className="flex gap-10 my-10">
         <section className=" w-full items-center relative ">
-          <h2 className="text-6xl  font-bold text-outline absolute  text-white drop-shadow ">WHO IS CHIDINMA NWAEZE ?</h2>
           <img src={aboutimg} alt="Chidinma" className="rounded-md w-full" />
+          <h2 className="text-6xl text-center font-bold text-outline absolute bottom-0 drop-shadow ">WHO IS CHIDINMA NWAEZE ?</h2>
         </section>
         <section className="mt-20 ml-30 mr-">
           <span className="flex gap-3 text-xl">
