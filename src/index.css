@@ -3,7 +3,7 @@
 
 @layer utilities {
   .text-outline {
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: var(--color-fuchsia-950) ;
     -webkit-text-fill-color: white;
     /* or any other color/width you need */
