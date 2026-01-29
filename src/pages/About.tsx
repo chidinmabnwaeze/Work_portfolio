@@ -1,10 +1,10 @@
-import aboutimg from "../assets/images/WhatsApp Image 2025-11-17 at 13.03.57_b6a1b2a0.jpg";
+import aboutimg from "../assets/images/WhatsApp_Image_2025-11-17_at_13.03.57_b6a1b2a0-removebg-preview.png";
 import { Download, Briefcase } from "lucide-react";
 
 type Metrics = {
   figure: number;
   name: string;
-};
+}
 const metrics: Metrics[] = [
   { figure: 3, name: "Organizations" },
   { figure: 5, name: "Projects" },
@@ -19,8 +19,9 @@ const About = () => {
       {/* <span className="bg-fuchsia-950 w-20 h-0.5 mt-2">.</span> */}
       <h1 className="font-bold text-4xl">About Me</h1>
       <div className="flex gap-10 my-10">
-        <section className=" w-full">
-          <img src={aboutimg} alt="Chidinma" className="rounded-md" />
+        <section className=" w-full items-center relative ">
+          <h2 className="text-6xl  font-bold text-outline absolute  text-white drop-shadow ">WHO IS CHIDINMA NWAEZE ?</h2>
+          <img src={aboutimg} alt="Chidinma" className="rounded-md w-full" />
         </section>
         <section className="mt-20 ml-30 mr-">
           <span className="flex gap-3 text-xl">

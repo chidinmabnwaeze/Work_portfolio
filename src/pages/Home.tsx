@@ -4,6 +4,10 @@ import About from "./About";
 import Project from "./Project";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Skills from "./Skills";
+import next from "../assets/logo/next js.jpg"
+import react from "../assets/logo/React-icon.svg.png"
+import ts from "../assets/logo/Typescript_logo_2020.svg.png"
+import vite from "../assets/logo/Vitejs-logo.svg.png"
 
 interface HomeProps {
   heading: string;
@@ -11,6 +15,25 @@ interface HomeProps {
 }
 
 const Home = () => {
+   const logos = [
+          {
+              name: "Next JS",
+              logo : next
+          },
+           {
+              name: "React",
+              logo : react
+          },
+           {
+              name: "Typescript",
+              logo : ts
+          },
+           {
+              name: "Vite",
+              logo : vite
+          },
+          
+      ]
   return (
     <>
       <main className="hero flex justify-center gap-30 p-10 h-screen bg-blend-darken bg-fuchsia-950 text-white items-center">
@@ -30,12 +53,15 @@ const Home = () => {
           </h2>
           <p className="pt-10">
             I am a web developer, Frontend Developer, i specialize in ...
-            <br />I am a web developer, Frontend Developer, i specialize in ...{" "}
+            <br /> web development, Frontend Development, i specialize in ...{" "}
           </p>
-          {/* 
-          <span>
-            <img src="" alt="" />
-          </span> */}
+          
+          <span className="flex ">
+            {logos.map((item, index)=>(
+
+            <img key= {index} src={item.logo} alt=""  className="w-6 m-2"/>
+            ))}
+          </span>
           <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition transform hover:scale-105 font-bold">
             Contact Me <ArrowUpRight />
           </button>

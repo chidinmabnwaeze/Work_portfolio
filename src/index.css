@@ -1,6 +1,15 @@
 
 @import "tailwindcss";
 
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color: transparent;
+    /* or any other color/width you need */
+  }
+}
+
 *{
   font-family: "Nunito", sans-serif;
 }
