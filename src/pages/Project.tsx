@@ -2,14 +2,14 @@ import project1 from "../assets/Screenshot 2026-01-22 215413.png";
 import project2 from "../assets/Screenshot 2026-01-22 215432.png";
 import next from "../assets/logo/next js.jpg";
 
-interface Projects {
-  img : "",
-  name: string,
-  description: string,
-  skills: []
-}
+// interface Projects {
+//   img : "",
+//   name: string,
+//   description: string,
+//   skills: []
+// }
 
-export default function Project<Projects>() {
+export default function Project() {
   const projects = [
     {
       img: project1,

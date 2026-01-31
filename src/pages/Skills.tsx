@@ -7,10 +7,10 @@ import vite from "../assets/logo/Vitejs-logo.svg.png"
 import mongodb from "../assets/logo/png-transparent-mongodb-plain-wordmark-logo-icon.png"
 
 
-interface logos {
-name: string,
+// interface logos {
+// name: string,
 
-}
+// }
 const Skills = () => {
     const logos = [
         {

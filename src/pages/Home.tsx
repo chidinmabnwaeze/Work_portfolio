@@ -10,10 +10,10 @@ import ts from "../assets/logo/Typescript_logo_2020.svg.png"
 import vite from "../assets/logo/Vitejs-logo.svg.png"
 import Footer from "../components/Footer";
 
-interface HomeProps {
-  heading: string;
-  subText: string;
-}
+// interface HomeProps {
+//   heading: string;
+//   subText: string;
+// }
 
 const Home = () => {
    const logos = [

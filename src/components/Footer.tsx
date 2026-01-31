@@ -1,13 +1,13 @@
 import { PhoneCall, Mail, Linkedin } from "lucide-react";
 
-interface FooterProps {
-  title: string;
-  desc: string;
-//   menu: menu[];
-  links: string;
-}
+// interface FooterProps {
+//   title: string;
+//   desc: string;
+// //   menu: menu[];
+//   links: string;
+// }
 
-export default function Footer<FooterProps>() {
+export default function Footer() {
   const date = new Date();
   return (
     <>
