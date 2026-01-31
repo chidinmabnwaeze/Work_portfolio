@@ -3,7 +3,7 @@ import { PhoneCall, Mail, Linkedin } from "lucide-react";
 interface FooterProps {
   title: string;
   desc: string;
-  menu: menu[];
+//   menu: menu[];
   links: string;
 }
 

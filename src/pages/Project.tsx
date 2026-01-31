@@ -59,7 +59,7 @@ export default function Project<Projects>() {
             <div className="m-8 py-3 ">
               <h2 className="text-2xl my-2 ">{project.name}</h2>
               <p>{project.description}</p>
-              <div>{project.skills?.skill}</div>
+              {/* <div>{project.skills?.skill}</div> */}
               <button className="bg-fuchsia-950 text-white p-3 mt-5 rounded">
                 View Project
               </button>

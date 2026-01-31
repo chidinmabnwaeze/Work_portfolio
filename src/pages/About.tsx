@@ -1,4 +1,4 @@
-import aboutimg from "../assets/images/WhatsApp_Image_2025-11-17_at_13.03.57_b6a1b2a0-removebg-preview.png";
+import aboutimg from "../assets/images/Group 2.png";
 import { Download, Briefcase } from "lucide-react";
 
 type Metrics = {
@@ -19,7 +19,7 @@ const About = () => {
       {/* <span className="bg-fuchsia-950 w-20 h-0.5 mt-2">.</span> */}
       <h1 className="font-bold text-4xl">About Me</h1>
       <div className="flex gap-10 my-10">
-        <section className=" w-full items-center relative border-r-8 rounded-r-full">
+        <section className=" w-full items-center relative ">
           <img src={aboutimg} alt="Chidinma" className="rounded-md w-full" />
           <h2 className="text-6xl text-center font-bold text-outline absolute bottom-0 drop-shadow ">WHO IS CHIDINMA NWAEZE ?</h2>
         </section>
