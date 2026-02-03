@@ -9,6 +9,7 @@ import react from "../assets/logo/React-icon.svg.png"
 import ts from "../assets/logo/Typescript_logo_2020.svg.png"
 import vite from "../assets/logo/Vitejs-logo.svg.png"
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 // interface HomeProps {
 //   heading: string;
@@ -78,6 +79,7 @@ const Home = () => {
       <About />
       <Project />
       <Skills/>
+      <Testimonials/>
       <Footer/>
     </>
   );
