@@ -70,6 +70,17 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [nextSlide]);
 
+  //pause on hover
+  const [isPaused, setIsPaused] = useState(false)
+
+ useEffect(()=>{
+    if (isPaused)
+        return
+    
+    const interval = setInterval(nextSlide, 3000);
+    return ()=> clearInterval(interval)
+ },[isPaused, nextSlide])
+
   return (
     <div className="testimonials-container flex flex-col justify-center items-center">
       <p>Here what people have to say about me</p>
