@@ -56,14 +56,15 @@ const Testimonials = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false)
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => prev + 1);
+    setCurrentSlide((prev) => (prev + 1)% reviews.length);
   }, [reviews.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(()=> {
     setCurrentSlide((prev) => (prev - 1) % reviews.length);
-  };
+  }, [reviews.length]) ;
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
@@ -71,7 +72,7 @@ const Testimonials = () => {
   }, [nextSlide]);
 
   //pause on hover
-  const [isPaused, setIsPaused] = useState(false)
+  
 
  useEffect(()=>{
     if (isPaused)
@@ -82,11 +83,11 @@ const Testimonials = () => {
  },[isPaused, nextSlide])
 
   return (
-    <div className="testimonials-container flex flex-col justify-center items-center">
+    <main className="testimonials-container flex flex-col justify-center items-center">
       <p>Here what people have to say about me</p>
       <h1 className="font-bold text-4xl">Testimonials</h1>
       <div className="slider">
-        <div className="slide-content border rounded-2xl max-w-5xl p-6">
+        <div className="slide-content shadow bg-white rounded-2xl max-w-5xl p-8 relative flex w-full overflow-hidden">
           {reviews.map((review, index) => (
             <div key={index} className="review-card ">
               {review.avatar && (
@@ -96,13 +97,19 @@ const Testimonials = () => {
                 {review.content}
                 <div className="review-author">
                   <strong>{review.name}</strong>
+                  <p className="text-gray-600">{review.role}</p>
                 </div>
               </div>
             </div>
           ))}
+          <div className={`indicators flex justify-between${_review,index}`}>
+            <button onClick={prevSlide} className="absolute top-0 bottom-0 left-0 cursor-pointer">&lt;</button>
+          <button onClick={nextSlide} className="absolute top-0 bottom-0 right-0 cursor-pointer">&gt;</button>
+
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
