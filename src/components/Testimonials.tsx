@@ -82,21 +82,27 @@ const Testimonials = () => {
         onMouseLeave={() => setIsPaused(false)}
       >
         <div className="slide-content shadow bg-white rounded-2xl max-w-5xl p-8 relative flex w-full overflow-hidden">
-          {reviews.map((review, index) => (
-            <div key={index} className="review-card ">
-              {review.avatar && (
-                <img src={review.avatar} alt={review.name} className="avatar" />
-              )}
-              <div className="review-content">
-                {review.content}
-                <div className="review-author">
-                  <strong>{review.name}</strong>
-                  <p className="text-gray-600">{review.role}</p>
-                </div>
+          {/* {reviews.map((review, index) => ( */}
+          <div className="review-card ">
+            {reviews[currentSlide].avatar && (
+              <img
+                src={reviews[currentSlide].avatar}
+                alt={reviews[currentSlide].name}
+                className="avatar"
+              />
+            )}
+            <div className="reviews-content">
+              {reviews[currentSlide].content}
+              <div className="reviews-author">
+                <strong>{reviews[currentSlide].name}</strong>
+                <p className="text-gray-600">{reviews[currentSlide].role}</p>
               </div>
             </div>
-          ))}
-          <div className={`indicators flex justify-between${(_review, index)}`}>
+          </div>
+          {/* ))} */}
+          <div
+            className={`indicators flex justify-between${(_reviews[currentSlide], index)}`}
+          >
             <button
               onClick={prevSlide}
               className="absolute top-0 bottom-0 left-0 cursor-pointer"
