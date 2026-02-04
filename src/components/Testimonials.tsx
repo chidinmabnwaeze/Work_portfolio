@@ -56,37 +56,31 @@ const Testimonials = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false)
+  const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1)% reviews.length);
+    setCurrentSlide((prev) => (prev + 1) % reviews.length);
   }, [reviews.length]);
 
-  const prevSlide = useCallback(()=> {
-    setCurrentSlide((prev) => (prev - 1) % reviews.length);
-  }, [reviews.length]) ;
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+  }, [reviews.length]);
 
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
-  }, [nextSlide]);
-
-  //pause on hover
-  
-
- useEffect(()=>{
-    if (isPaused)
-        return
-    
-    const interval = setInterval(nextSlide, 3000);
-    return ()=> clearInterval(interval)
- },[isPaused, nextSlide])
+  }, [isPaused, nextSlide]);
 
   return (
     <main className="testimonials-container flex flex-col justify-center items-center">
       <p>Here what people have to say about me</p>
       <h1 className="font-bold text-4xl">Testimonials</h1>
-      <div className="slider">
+      <div
+        className="slider"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="slide-content shadow bg-white rounded-2xl max-w-5xl p-8 relative flex w-full overflow-hidden">
           {reviews.map((review, index) => (
             <div key={index} className="review-card ">
@@ -102,10 +96,19 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
-          <div className={`indicators flex justify-between${_review,index}`}>
-            <button onClick={prevSlide} className="absolute top-0 bottom-0 left-0 cursor-pointer">&lt;</button>
-          <button onClick={nextSlide} className="absolute top-0 bottom-0 right-0 cursor-pointer">&gt;</button>
-
+          <div className={`indicators flex justify-between${(_review, index)}`}>
+            <button
+              onClick={prevSlide}
+              className="absolute top-0 bottom-0 left-0 cursor-pointer"
+            >
+              &lt;
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute top-0 bottom-0 right-0 cursor-pointer"
+            >
+              &gt;
+            </button>
           </div>
         </div>
       </div>
