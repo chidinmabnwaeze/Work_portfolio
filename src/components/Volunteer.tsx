@@ -1,4 +1,4 @@
-import evan from "../assets/images/image.png";
+// import evan from "../assets/images/image.png";
 import { UserStar } from "lucide-react";
 import mentor1 from "../assets/images/mentor 1.jpeg"
 import mentor2 from "../assets/images/mentor 2.jpeg"
