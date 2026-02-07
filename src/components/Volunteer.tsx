@@ -1,5 +1,7 @@
 import evan from "../assets/images/image.png";
 import { UserStar } from "lucide-react";
+import mentor1 from "../assets/images/mentor 1.jpeg"
+import mentor2 from "../assets/images/mentor 2.jpeg"
 
 interface VolunteerProps {
   title: string;
@@ -61,12 +63,12 @@ const Volunteer = () => {
             <p className="my-5">{item.content}</p>
             <div className="gallery flex flex-wrap my-5 justify-center md:justify-start">
               <img
-                src={evan}
+                src={mentor1}
                 alt=""
                 className="w-40 h-40 md:w-60 md:h-60 rounded-xl m-3"
               />
               <img
-                src={evan}
+                src={mentor2}
                 alt=""
                 className="w-40 h-40 md:w-60 md:h-60 rounded-xl m-3"
               />
