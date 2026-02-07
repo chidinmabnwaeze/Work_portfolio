@@ -21,11 +21,11 @@ const About = () => {
       <div className="flex gap-10 my-10">
         <section className=" w-full items-center relative ">
           <img src={aboutimg} alt="Chidinma" className="rounded-md w-full" />
-          <h2 className="text-6xl text-center font-bold text-outline absolute bottom-0 drop-shadow ">
+          <h2 className="text-6xl text-center font-bold text-outline absolute bottom-30 drop-shadow ">
             WHO IS CHIDINMA NWAEZE ?
           </h2>
         </section>
-        <section className="mt-20 ml-30 max-w-4xl">
+        <section className="mt-20 ml-3 max-w-4xl">
           <span className="flex gap-3 text-xl">
             <span className=" chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
