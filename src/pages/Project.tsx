@@ -48,7 +48,7 @@ export default function Project() {
       <section className="grid grid-cols-2 p-20 m-5 border-stone-800 bg-black ">
         {projects.map((project, index) => (
           <div
-            className="p_card bg-linear-90 bg-white p-10 m-2 rounded-2xl hover:transform hover:translate-y-3 hover:transition"
+            className="p_card bg-linear-90 bg-white/15 text-white p-10 m-2 rounded-2xl hover:transform hover:translate-y-3 hover:transition"
             key={index}
           >
             <img

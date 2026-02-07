@@ -73,50 +73,44 @@ const Testimonials = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <main className="testimonials-container flex flex-col justify-center items-center">
-      <p>Here what people have to say about me</p>
-      <h1 className="font-bold text-4xl">Testimonials</h1>
+    <main className="flex flex-col items-center py-16 bg-gray-50">
+      <p className="text-gray-500">Here’s what people say about me</p>
+      <h1 className="font-bold text-4xl mb-10">Testimonials</h1>
+
       <div
-        className="slider"
+        className="relative max-w-4xl w-full bg-white shadow-lg rounded-2xl p-10"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div className="slide-content shadow bg-white rounded-2xl max-w-5xl p-8 relative flex w-full overflow-hidden">
-          {/* {reviews.map((review, index) => ( */}
-          <div className="review-card ">
-            {reviews[currentSlide].avatar && (
-              <img
-                src={reviews[currentSlide].avatar}
-                alt={reviews[currentSlide].name}
-                className="avatar"
-              />
-            )}
-            <div className="reviews-content">
-              {reviews[currentSlide].content}
-              <div className="reviews-author">
-                <strong>{reviews[currentSlide].name}</strong>
-                <p className="text-gray-600">{reviews[currentSlide].role}</p>
-              </div>
-            </div>
-          </div>
-          {/* ))} */}
-          <div
-            className={`indicators flex justify-between${(_reviews[currentSlide], index)}`}
-          >
-            <button
-              onClick={prevSlide}
-              className="absolute top-0 bottom-0 left-0 cursor-pointer"
-            >
-              &lt;
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute top-0 bottom-0 right-0 cursor-pointer"
-            >
-              &gt;
-            </button>
+        {/* Slide */}
+        <div className="transition-all duration-500 ease-in-out">
+          {reviews[currentSlide].avatar && (
+            <img
+              src={reviews[currentSlide].avatar}
+              alt={reviews[currentSlide].name}
+              className="w-20 h-20 rounded-full mb-4"
+            />
+          )}
+          {reviews[currentSlide].content}
+          <div className="mt-4">
+            <strong>{reviews[currentSlide].name}</strong>
+            <p className="text-gray-600">{reviews[currentSlide].role}</p>
           </div>
         </div>
+
+        {/* Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-2xl"
+        >
+          ‹
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-3 top-1/2 -translate-y-1/2 text-2xl"
+        >
+          ›
+        </button>
       </div>
     </main>
   );

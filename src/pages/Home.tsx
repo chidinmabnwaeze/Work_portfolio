@@ -11,6 +11,7 @@ import vite from "../assets/logo/Vitejs-logo.svg.png"
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 import Volunteer from "../components/Volunteer";
+import Experience from "../components/Experience";
 
 // interface HomeProps {
 //   heading: string;
@@ -80,6 +81,7 @@ const Home = () => {
       <About />
       <Project />
       <Skills/>
+      <Experience/>
       <Testimonials/>
       <Volunteer/>
       <Footer/>

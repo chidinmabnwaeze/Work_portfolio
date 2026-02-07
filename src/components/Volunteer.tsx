@@ -3,8 +3,8 @@ import React from "react";
 interface VolunteerProps {
   title: string;
   org: string;
-  duration: Date;
-  content: React.ReactNode;
+  duration: string;
+  content: string;
 }
 
 const Volunteer = () => {
@@ -12,7 +12,7 @@ const Volunteer = () => {
     {
       title: "Mentor",
       org: "Technovation",
-      duration: 1-01-2023,
+      duration: "1-01-2023",
       content: "As a mentor in the technovation girls ....",
     },
   ];
