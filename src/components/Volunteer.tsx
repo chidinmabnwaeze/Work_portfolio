@@ -28,10 +28,10 @@ const Volunteer = () => {
   ];
 
   return (
-    <main className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto ">
+    <main className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-30">
       <p>Here's how I volunteer</p>
       <h1 className="font-bold text-4xl">Volunteering</h1>
-      <section className="border border-gray-100 rounded-3xl p-10 hover:shadow-lg">
+      <section className="border border-gray-100 rounded-3xl p-10 hover:shadow-lg bg-white/15 mt-10">
         {volunteer.map((item, index) => (
           <div key={index}>
             <div className="rounded-full p-2 bg-fuchsia-950 text-white text-center w-1/5">
