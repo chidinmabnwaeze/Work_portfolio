@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
+import ham from "../assets/images/Hamilton.jpg"
+import evan from "../assets/images/image.png"
 
 interface Review {
   name: string;
@@ -11,7 +13,7 @@ const Testimonials = () => {
   const reviews: Review[] = [
     {
       name: "Everistus Nwogo",
-      avatar: "/path-to-avatar-image.jpg",
+      avatar: evan,
       role: "Senior AI and Software Engineer",
       content: (
         <p>
@@ -35,7 +37,7 @@ const Testimonials = () => {
     },
     {
       name: "ONISODUMEYA HAMILTON",
-      avatar: "/path-to-avatar-image.jpg",
+      avatar: ham,
       role: "STEM Instructor",
       content: (
         <p>
