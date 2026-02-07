@@ -14,22 +14,22 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main className="flex flex-col justify-center items-center m-15">
+    <main className="flex flex-col justify-center items-center m-8 px-4 md:px-0">
       <p>Get to know me</p>
-      {/* <span className="bg-fuchsia-950 w-20 h-0.5 mt-2">.</span> */}
       <h1 className="font-bold text-4xl">About Me</h1>
-      <div className="flex gap-10 my-10">
-        <section className=" w-full items-center relative ">
-          <img src={aboutimg} alt="Chidinma" className="rounded-md w-full" />
-          <h2 className="text-6xl text-center font-bold text-outline absolute bottom-30 drop-shadow ">
-            WHO IS CHIDINMA NWAEZE ?
-          </h2>
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10 my-10 items-start w-full max-w-5xl">
+        <section className="w-full md:w-1/3 items-center relative">
+          <img
+            src={aboutimg}
+            alt="Chidinma"
+            className="rounded-md w-full h-64 md:h-80 object-cover"
+          />
         </section>
-        <section className="mt-20 ml-3 max-w-4xl">
-          <span className="flex gap-3 text-xl">
-            <span className=" chidinma text-fuchsia-950 text-3xl">
+        <section className="mt-6 md:mt-0 md:ml-3 md:max-w-2xl w-full">
+          <div className="text-xl">
+            <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
-            </span>{" "}
+            </span>
             is a passionate Frontend Web Developer with experience in building
             and optimizing scalable, user-friendly and impactful websites and
             digital solutions. Skilled in React.js, Vite, JavaScript, WordPress,
@@ -40,17 +40,15 @@ const About = () => {
             I collaborate across teams to manage website development, server
             migrations, SSL integrations, and digital optimization. Beyond work,
             I mentor young girls in Abuja on STEM, public speaking, and
-            problem-solving aligned with the UN SDGs. 
-            <br />
-            I thrive at the
-            intersection of technology, education, and community impact, driven
-            by the belief that digital solutions can transform lives and
-            industries. I’m currently advancing my skills toward becoming a Full
-            Stack Developer, and exploring opportunities to contribute to
-            innovative projects that require both technical expertise and
-            creative problem-solving.
-          </span>
-          <div className="metrics flex justify-center gap-10 mt-10">
+            problem-solving aligned with the UN SDGs.
+            <br />I thrive at the intersection of technology, education, and
+            community impact, driven by the belief that digital solutions can
+            transform lives and industries. I’m currently advancing my skills
+            toward becoming a Full Stack Developer, and exploring opportunities
+            to contribute to innovative projects that require both technical
+            expertise and creative problem-solving.
+          </div>
+          <div className="metrics grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
             {metrics.map((item, index) => (
               <div key={index} className="mb-4 text-center">
                 <h2 className="text-3xl font-bold text-purple-600">
@@ -60,13 +58,11 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="buttons flex justify-center gap-10 mt-10">
-            <button className="bg-purple-600 text-white p-4 rounded mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105">
+          <div className="buttons flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-10">
+            <button className="bg-purple-600 text-white p-4 rounded mr-0 sm:mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105">
               Hire Me
               <Briefcase />
             </button>
-            {/* 
-            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 hover:text-white transition transform hover:scale-105"> */}
             <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105 hover:text-white">
               Download CV
               <Download />

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import ham from "../assets/images/Hamilton.jpg"
-import evan from "../assets/images/image.png"
+import ham from "../assets/images/Hamilton.jpg";
+import evan from "../assets/images/image.png";
 
 interface Review {
   name: string;
@@ -90,7 +90,7 @@ const Testimonials = () => {
             <img
               src={reviews[currentSlide].avatar}
               alt={reviews[currentSlide].name}
-              className="w-20 h-20 rounded-full mb-4"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4"
             />
           )}
           {reviews[currentSlide].content}

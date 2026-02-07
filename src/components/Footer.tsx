@@ -11,12 +11,12 @@ export default function Footer() {
   const date = new Date();
   return (
     <>
-      <main className="flex justify-between bg-fuchsia-950 text-white p-20 ">
-        <section>
-          <h1>CHIDINMA NWAEZE</h1>
-          <p></p>
+      <main className="flex flex-col md:flex-row justify-between bg-fuchsia-950 text-white p-6 md:p-20 gap-6">
+        <section className="text-center md:text-left">
+          <h1 className="font-bold">CHIDINMA NWAEZE</h1>
+          <p className="mt-2"></p>
         </section>
-        <section>
+        <section className="text-center md:text-left">
           <h1 className="text-xl pb-2">Quick Links</h1>
           <ul>
             <li>
@@ -30,22 +30,22 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section>
+        <section className="text-center md:text-left">
           <h1 className="text-xl pb-2">Get In Touch</h1>
           <ul>
-            <li className="flex ">
-             <PhoneCall width={20}/>
+            <li className="flex items-center justify-center md:justify-start">
+              <PhoneCall width={20} />
               <span className="px-3">08027966117</span>
             </li>
-           <li className="flex ">
-             <Mail width={20} />
-             <span className="px-3">chidinmabnwaeze@gmail.com</span> 
+            <li className="flex items-center justify-center md:justify-start">
+              <Mail width={20} />
+              <span className="px-3">chidinmabnwaeze@gmail.com</span>
             </li>
-           
           </ul>
           <div className="social pt-3">
-            <a href=""><Linkedin/> </a>
-
+            <a href="">
+              <Linkedin />{" "}
+            </a>
           </div>
         </section>
       </main>

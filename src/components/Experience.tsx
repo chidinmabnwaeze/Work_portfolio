@@ -30,20 +30,20 @@ const Experience = () => {
     },
   ];
   return (
-    <main className="flex flex-col items-center m-15">
+    <main className="flex flex-col items-center m-8 px-4">
       <p className="mt-10">How my experience matters.</p>
       <h1 className="font-bold text-4xl">Experience</h1>
 
-      <section className=" min-w-3xl mt-8 ">
+      <section className="w-full max-w-3xl mt-8 space-y-4">
         {exp.map((item, index) => (
           <div
-            className="group flex justify-between items-center p-5 hover:border border-fuchsia-400 rounded-2xl backdrop-blur-md shadow-lg hover:shadow-[#784ab7]/40 transition duration-500 "
+            className="group flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-5 hover:border border-fuchsia-400 rounded-2xl backdrop-blur-md shadow-lg hover:shadow-[#784ab7]/40 transition duration-500"
             key={index}
           >
-            <div className="rounded-full bg-purple-600 p-4 text-white">
+            <div className="rounded-full bg-purple-600 p-3 md:p-4 text-white flex items-center justify-center mb-3 md:mb-0">
               <Briefcase />
             </div>
-            <div className=" text-right">
+            <div className="text-left md:text-right w-full">
               <h1 className="text-xl text-purple-600">{item.role}</h1>
               <h2 className="text-gray-700">{item.org}</h2>
               <div className="flex items-center text-sm text-gray-400">
