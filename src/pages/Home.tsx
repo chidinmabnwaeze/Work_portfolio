@@ -80,7 +80,7 @@ const Home = () => {
         </section>
 
         <section className="bg-fuchsia-800 rounded-full p-1 flex items-center justify-center mt-6 md:mt-0">
-          <div className="w-40 h-40 md:w-80 md:h-80 overflow-hidden rounded-full">
+          <div className="w-40 h-40 md:w-100 md:h-100 overflow-hidden rounded-full">
             <img
               src={ProfilePic}
               alt="Profile"
