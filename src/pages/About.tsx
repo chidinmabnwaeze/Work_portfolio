@@ -17,15 +17,18 @@ const About = () => {
     <main className="flex flex-col justify-center items-center m-8 px-4 md:px-0">
       <p>Get to know me</p>
       <h1 className="font-bold text-4xl">About Me</h1>
-      <div className="flex flex-col md:flex-row gap-8 md:gap-10 my-10 items-start w-full max-w-5xl">
-        <section className="w-full md:w-1/3 items-center relative">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 my-10 items-start w-full">
+        <section className="w-full lg:w-2/5 items-center relative">
           <img
             src={aboutimg}
             alt="Chidinma"
-            className="rounded-md w-full h-64 md:h-80 object-cover"
+            className="rounded-md w-full lg:h-full object-cover"
           />
+          <h2 className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 text-center text-6xl font-bold text-outline drop-shadow">
+            WHO IS CHIDINMA NWAEZE ?
+          </h2>
         </section>
-        <section className="mt-6 md:mt-0 md:ml-3 md:max-w-2xl w-full">
+        <section className="mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full">
           <div className="text-xl">
             <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
@@ -48,7 +51,7 @@ const About = () => {
             to contribute to innovative projects that require both technical
             expertise and creative problem-solving.
           </div>
-          <div className="metrics grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
+          <div className="metrics grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {metrics.map((item, index) => (
               <div key={index} className="mb-4 text-center">
                 <h2 className="text-3xl font-bold text-purple-600">
@@ -58,7 +61,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="buttons flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-10">
+          <div className="buttons flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mt-10">
             <button className="bg-purple-600 text-white p-4 rounded mr-0 sm:mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105">
               Hire Me
               <Briefcase />

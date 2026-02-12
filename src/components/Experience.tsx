@@ -34,7 +34,7 @@ const Experience = () => {
       <p className="mt-10">How my experience matters.</p>
       <h1 className="font-bold text-4xl">Experience</h1>
 
-      <section className="w-full max-w-3xl mt-8 space-y-4">
+      <section className="w-full max-w-3xl mt-8 space-y-2">
         {exp.map((item, index) => (
           <div
             className="group flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-5 hover:border border-fuchsia-400 rounded-2xl backdrop-blur-md shadow-lg hover:shadow-[#784ab7]/40 transition duration-500"
