@@ -17,7 +17,7 @@ const About = () => {
     <main className="flex flex-col justify-center items-center m-8 px-4 md:px-0">
       <p>Get to know me</p>
       <h1 className="font-bold text-4xl">About Me</h1>
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 my-10 items-start w-full">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 my-10 items-start mx-auto w-full">
         <section className="w-full lg:w-2/5 items-center relative">
           <img
             src={aboutimg}

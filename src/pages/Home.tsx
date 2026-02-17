@@ -12,6 +12,7 @@ import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 import Volunteer from "../components/Volunteer";
 import Experience from "../components/Experience";
+import Contact from "./Contact";
 
 // interface HomeProps {
 //   heading: string;
@@ -95,6 +96,7 @@ const Home = () => {
       <Experience />
       <Testimonials />
       <Volunteer />
+      <Contact/>
       <Footer />
     </>
   );
