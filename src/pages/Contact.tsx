@@ -3,10 +3,10 @@ import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-re
 
 export default function Contact() {
   return (
-    <main className="flex flex-col justify-center items-center m-15"
-    // style={{
-    //     // backgroundImage: `url(${contactImg})`
-    // }}
+    <main className="flex flex-col justify-center items-center m-15 min-h-screen bg-cover bg-center"
+    style={{
+        backgroundImage: `url(${contactImg})`
+    }}
     >
       <p className="mt-10">Get in Touch</p>
       <h1 className="font-bold text-4xl">Contact</h1>
