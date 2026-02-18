@@ -10,7 +10,7 @@ export default function Contact() {
       }}
     >
       <div className="absolute inset-0 bg-[#352055]/70"></div>
-      <div className="relative z-10">
+      {/* <div className="relative z-10"> */}
         <p className="mt-10">Get in Touch</p>
         <h1 className="font-bold text-4xl">Contact</h1>
 
@@ -50,7 +50,7 @@ export default function Contact() {
             </span>
           </button>
         </form>
-      </div>
+      {/* </div> */}
     </main>
   );
 }
