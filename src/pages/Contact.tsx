@@ -1,12 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
-import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-removebg-preview.png"
+import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-removebg-preview.png";
 
 export default function Contact() {
   return (
-    <main className="flex flex-col justify-center items-center m-15 min-h-screen bg-cover bg-center"
-    style={{
-        backgroundImage: `url(${contactImg})`
-    }}
+    <main
+      className="flex flex-col justify-center items-center m-15 min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${contactImg})`,
+      }}
     >
       <p className="mt-10">Get in Touch</p>
       <h1 className="font-bold text-4xl">Contact</h1>
@@ -43,7 +44,7 @@ export default function Contact() {
         <button className="flex justify-center gap-2 text-white bg-fuchsia-950 p-4 rounded w-full text-center hover:bg-white hover:text-fuchsia-950 hover:border border-fuchsia-950 cursor-pointer">
           Off to my Inbox
           <span>
-            <ArrowUpRight width={20}  />
+            <ArrowUpRight width={20} />
           </span>
         </button>
       </form>
