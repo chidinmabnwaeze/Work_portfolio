@@ -14,10 +14,10 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main className="flex flex-col justify-center items-center m-8 px-4 md:px-0">
+    <main className="flex flex-col justify-center items-center my-18 px-4 md:px-0">
       <p>Get to know me</p>
       <h1 className="font-bold text-4xl">About Me</h1>
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 my-10 items-start mx-auto w-full">
+      <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-20 px-4 mx-auto w-full">
         <section className="w-full lg:w-2/5 items-center relative">
           <img
             src={aboutimg}
@@ -29,7 +29,7 @@ const About = () => {
           </h2>
         </section>
         <section className="mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full">
-          <div className="text-xl">
+          <div className="text-xl text-justify">
             <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
             </span>

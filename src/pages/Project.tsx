@@ -45,7 +45,7 @@ export default function Project() {
       <p className="mt-10">Here are some of my projects.</p>
       <h1 className="font-bold text-4xl">Projects</h1>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 sm:p-8 m-5 border-stone-800 bg-black w-full">
+      <section className="grid grid-cols-2 sm:grid-cols-2 gap-6 p-6 sm:p-8 m-5 border-stone-800 bg-black w-full">
         {projects.map((project, index) => (
           <div
             className="p_card bg-linear-90 bg-white/15 text-white p-6 m-2 rounded-2xl hover:transform hover:translate-y-3 hover:transition"
