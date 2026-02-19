@@ -4,19 +4,19 @@ import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-re
 export default function Contact() {
   return (
     <main
-      className="flex flex-col justify-center items-center m-15 min-h-screen bg-cover bg-center"
+      className="flex flex-col justify-center items-center my-15 min-h-screen bg-cover bg-center relative "
       style={{
         backgroundImage: `url(${contactImg})`,
       }}
     >
-      <div className="absolute inset-0 bg-[#352055]/70"></div>
-      {/* <div className="relative z-10"> */}
+      <div className="absolute inset-0 bg-white/75"></div>
+      <div className="relative z-10 min-w-2xl flex flex-col justify-center items-center">
         <p className="mt-10">Get in Touch</p>
         <h1 className="font-bold text-4xl">Contact</h1>
 
         <form
           action=""
-          className="border border-gray-200 rounded-xl p-8 w-full max-w-2xl my-8"
+          className="border border-gray-200 rounded-xl p-8 w-full my-8 bg-white"
         >
           <div className="flex flex-col gap-2 my-7">
             <label htmlFor="name">Full Name</label>
@@ -50,7 +50,7 @@ export default function Contact() {
             </span>
           </button>
         </form>
-      {/* </div> */}
+      </div>
     </main>
   );
 }
