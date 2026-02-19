@@ -47,7 +47,7 @@ const Skills = () => {
   ];
   return (
     <main className="flex flex-col justify-center items-center m-15">
-      <p>These are the skills I have</p>
+      <p className="text-gray-500">These are the skills I have</p>
       <h1 className="font-bold text-4xl">My Skills</h1>
 
       <section className="flex flex-col items-center gap-10 my-10 w-full px-4">

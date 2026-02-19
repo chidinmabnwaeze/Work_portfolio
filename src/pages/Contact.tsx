@@ -11,7 +11,7 @@ export default function Contact() {
     >
       <div className="absolute inset-0 bg-white/75"></div>
       <div className="relative z-10 min-w-2xl flex flex-col justify-center items-center">
-        <p className="mt-10">Get in Touch</p>
+        <p className="mt-10 text-gray-500">Get in Touch</p>
         <h1 className="font-bold text-4xl">Contact</h1>
 
         <form

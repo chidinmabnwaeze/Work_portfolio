@@ -42,7 +42,7 @@ export default function Project() {
 
   return (
     <main className="flex flex-col justify-center items-center m-15">
-      <p className="mt-10">Here are some of my projects.</p>
+      <p className="mt-10 text-gray-500">Here are some of my projects.</p>
       <h1 className="font-bold text-4xl">Projects</h1>
 
       <section className="grid grid-cols-2 sm:grid-cols-2 gap-6 p-6 sm:p-8 m-5 border-stone-800 bg-black w-full">

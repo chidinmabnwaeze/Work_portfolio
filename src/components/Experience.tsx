@@ -31,7 +31,7 @@ const Experience = () => {
   ];
   return (
     <main className="flex flex-col items-center m-8 px-4">
-      <p className="mt-10">How my experience matters.</p>
+      <p className="mt-10 text-gray-500">How my experience matters.</p>
       <h1 className="font-bold text-4xl">Experience</h1>
 
       <section className="w-full max-w-3xl mt-8 space-y-2">

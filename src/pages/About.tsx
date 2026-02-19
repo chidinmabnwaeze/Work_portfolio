@@ -15,7 +15,7 @@ const metrics: Metrics[] = [
 const About = () => {
   return (
     <main className="flex flex-col justify-center items-center my-18 px-4 md:px-0">
-      <p>Get to know me</p>
+      <p className="text-gray-500">Get to know me</p>
       <h1 className="font-bold text-4xl">About Me</h1>
       <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-20 px-4 mx-auto w-full">
         <section className="w-full lg:w-2/5 items-center relative">
