@@ -9,13 +9,17 @@
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms, transform 300ms ease-in-out;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  transform: translateY(-4px);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: translateY(-4px);
 }
 
 @keyframes logo-spin {
@@ -35,8 +39,33 @@
 
 .card {
   padding: 2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Link transitions */
+a {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: translateY(-2px);
 }

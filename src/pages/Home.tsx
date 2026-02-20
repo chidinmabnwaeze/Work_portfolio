@@ -41,8 +41,8 @@ const Home = () => {
   return (
     <>
       <main className="hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
-        <section className="max-w-2xl text-center md:text-left">
-          <span className="text-shadow text-xl flex items-center gap-4 justify-center md:justify-start">
+        <section className="max-w-2xl text-center md:text-left animate-slide-left">
+          <span className="text-shadow text-xl flex items-center gap-4 justify-center md:justify-start animate-fade-in">
             <p className="hi text-2xl">Hi There ...</p>
             <DotLottieReact
               src="https://lottie.host/48743c51-ce31-44c0-86de-a0592ee3ae2d/dj6cWEaV1e.lottie"
@@ -51,37 +51,49 @@ const Home = () => {
               style={{ width: "60px", height: "60px" }}
             />
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold mt-6 md:mt-10">
+          <h1 className="text-4xl md:text-6xl font-bold mt-6 md:mt-10 animate-slide-up transition-smooth">
             Welcome To My Portfolio
           </h1>
-          <h2 className="italic mt-2">
+          <h2
+            className="italic mt-2 animate-slide-up transition-smooth"
+            style={{ animationDelay: "0.2s" }}
+          >
             A Frontend Developer Crafting Engaging Web Experiences
           </h2>
-          <p className="pt-6 md:pt-10">
+          <p
+            className="pt-6 md:pt-10 animate-slide-up transition-smooth"
+            style={{ animationDelay: "0.4s" }}
+          >
             I am a web developer, Frontend Developer, i specialize in ...
             <br /> web development, Frontend Development, i specialize in
             ...{" "}
           </p>
 
-          <span className="flex justify-center md:justify-start mt-4">
+          <span
+            className="flex justify-center md:justify-start mt-4 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             {logos.map((item, index) => (
               <img
                 key={index}
                 src={item.logo}
                 alt={item.name}
-                className="w-6 m-2"
+                className="w-6 m-2 transition-smooth hover:scale-125 hover:drop-shadow-lg"
               />
             ))}
           </span>
-          <div className="flex justify-center md:justify-start">
-            <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition transform hover:scale-105 font-bold">
+          <div
+            className="flex justify-center md:justify-start animate-fade-in"
+            style={{ animationDelay: "0.8s" }}
+          >
+            <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition-smooth hover:scale-105 hover:shadow-lg font-bold">
               Contact Me <ArrowUpRight />
             </button>
           </div>
         </section>
 
-        <section className="bg-fuchsia-800 rounded-full p-1 flex items-center justify-center mt-6 md:mt-0">
-          <div className="w-40 h-40 md:w-120 md:h-120 overflow-hidden rounded-full">
+        <section className="bg-fuchsia-800 rounded-full p-1 flex items-center justify-center mt-6 md:mt-0 animate-slide-right">
+          <div className="w-40 h-40 md:w-120 md:h-120 overflow-hidden rounded-full transition-smooth hover:scale-105 hover:shadow-2xl">
             <img
               src={ProfilePic}
               alt="Profile"
@@ -96,7 +108,7 @@ const Home = () => {
       <Experience />
       <Testimonials />
       <Volunteer />
-      <Contact/>
+      <Contact />
       <Footer />
     </>
   );

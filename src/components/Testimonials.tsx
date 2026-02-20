@@ -76,8 +76,15 @@ const Testimonials = () => {
 
   return (
     <main className="flex flex-col items-center py-16 bg-gray-50">
-      <p className="text-gray-500">Here’s what people say about me</p>
-      <h1 className="font-bold text-4xl mb-10">Testimonials</h1>
+      <p className="text-gray-500 animate-slide-down">
+        Here's what people say about me
+      </p>
+      <h1
+        className="font-bold text-4xl mb-10 animate-slide-down"
+        style={{ animationDelay: "0.2s" }}
+      >
+        Testimonials
+      </h1>
 
       <div
         className="relative max-w-4xl w-full bg-white shadow-lg rounded-2xl p-10"

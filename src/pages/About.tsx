@@ -14,21 +14,26 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main className="flex flex-col justify-center items-center my-18 px-4 md:px-0">
-      <p className="text-gray-500">Get to know me</p>
-      <h1 className="font-bold text-4xl">About Me</h1>
+    <main className="flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
+      <p className="text-gray-500 animate-slide-down">Get to know me</p>
+      <h1
+        className="font-bold text-4xl animate-slide-down"
+        style={{ animationDelay: "0.2s" }}
+      >
+        About Me
+      </h1>
       <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-20 px-4 mx-auto w-full">
-        <section className="w-full lg:w-2/5 items-center relative">
+        <section className="w-full lg:w-2/5 items-center relative animate-slide-left">
           <img
             src={aboutimg}
             alt="Chidinma"
-            className="rounded-md w-full lg:h-full object-cover"
+            className="rounded-md w-full lg:h-full object-cover transition-smooth hover:scale-105 hover:shadow-2xl"
           />
           <h2 className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 text-center text-6xl font-bold text-outline drop-shadow">
             WHO IS CHIDINMA NWAEZE ?
           </h2>
         </section>
-        <section className="mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full">
+        <section className="mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full animate-slide-right">
           <div className="text-xl text-justify">
             <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
@@ -53,20 +58,27 @@ const About = () => {
           </div>
           <div className="metrics grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {metrics.map((item, index) => (
-              <div key={index} className="mb-4 text-center">
-                <h2 className="text-3xl font-bold text-purple-600">
+              <div
+                key={index}
+                className="mb-4 text-center animate-scale-in transition-smooth"
+                style={{ animationDelay: `${0.2 * index}s` }}
+              >
+                <h2 className="text-3xl font-bold text-purple-600 hover:text-fuchsia-950 transition-smooth">
                   {item.figure}+
                 </h2>
-                <p className="text-lg">{item.name}</p>
+                <p className="text-lg transition-smooth">{item.name}</p>
               </div>
             ))}
           </div>
-          <div className="buttons flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mt-10">
-            <button className="bg-purple-600 text-white p-4 rounded mr-0 sm:mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105">
+          <div
+            className="buttons flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mt-10 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <button className="bg-purple-600 text-white p-4 rounded mr-0 sm:mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:shadow-lg">
               Hire Me
               <Briefcase />
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition transform hover:scale-105 hover:text-white">
+            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:text-white hover:shadow-lg">
               Download CV
               <Download />
             </button>
