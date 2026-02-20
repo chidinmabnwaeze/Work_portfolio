@@ -12,6 +12,11 @@ const Header = ({ name }: HeaderType) => {
   const menu: MenuProps[] = [
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
+    {title: "Projects", url: "/projects" },
+    { title: "Skills", url: "/skills" },
+    { title: "Experience", url: "/experience" },
+    { title: "Testimonials", url: "/testimonials" },
+    { title: "Volunteer", url: "/volunteer" },
     { title: "Contact", url: "/contact" },
   ];
   return (

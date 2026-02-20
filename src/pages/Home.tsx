@@ -40,8 +40,8 @@ const Home = () => {
   ];
   return (
     <>
-      <main className="hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
-        <section className="max-w-2xl text-center md:text-left animate-slide-left">
+      <main className="reveal hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
+        <section className="reveal max-w-2xl text-center md:text-left animate-slide-left">
           <span className="text-shadow text-xl flex items-center gap-4 justify-center md:justify-start animate-fade-in">
             <p className="hi text-2xl">Hi There ...</p>
             <DotLottieReact
@@ -92,7 +92,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="bg-fuchsia-800 rounded-full p-1 flex items-center justify-center mt-6 md:mt-0 animate-slide-right">
+        <section className="reveal bg-fuchsia-800 rounded-full p-1 flex items-center justify-center mt-6 md:mt-0 animate-slide-right">
           <div className="w-40 h-40 md:w-120 md:h-120 overflow-hidden rounded-full transition-smooth hover:scale-105 hover:shadow-2xl">
             <img
               src={ProfilePic}

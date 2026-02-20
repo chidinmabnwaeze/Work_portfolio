@@ -129,3 +129,25 @@ html {
     @apply transition-all duration-500 ease-in-out;
   }
 }
+
+/* Scroll reveal: elements start hidden and animate into view when intersecting */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

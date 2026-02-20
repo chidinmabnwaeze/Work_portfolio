@@ -14,7 +14,7 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main className="flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
+    <main className="reveal flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
       <p className="text-gray-500 animate-slide-down">Get to know me</p>
       <h1
         className="font-bold text-4xl animate-slide-down"
@@ -23,7 +23,7 @@ const About = () => {
         About Me
       </h1>
       <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-20 px-4 mx-auto w-full">
-        <section className="w-full lg:w-2/5 items-center relative animate-slide-left">
+        <section className="reveal w-full lg:w-2/5 items-center relative animate-slide-left">
           <img
             src={aboutimg}
             alt="Chidinma"
@@ -33,7 +33,7 @@ const About = () => {
             WHO IS CHIDINMA NWAEZE ?
           </h2>
         </section>
-        <section className="mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full animate-slide-right">
+        <section className="reveal mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full animate-slide-right">
           <div className="text-xl text-justify">
             <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}

@@ -4,7 +4,7 @@ import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-re
 export default function Contact() {
   return (
     <main
-      className="flex flex-col justify-center items-center my-15 min-h-screen bg-cover bg-center relative "
+      className="reveal flex flex-col justify-center items-center my-15 min-h-screen bg-cover bg-center relative "
       style={{
         backgroundImage: `url(${contactImg})`,
       }}

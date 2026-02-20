@@ -30,7 +30,7 @@ const Experience = () => {
     },
   ];
   return (
-    <main className="flex flex-col items-center m-8 px-4 animate-fade-in">
+    <main className="reveal flex flex-col items-center m-8 px-4 animate-fade-in">
       <p className="mt-10 text-gray-500 animate-slide-down">
         How my experience matters.
       </p>
