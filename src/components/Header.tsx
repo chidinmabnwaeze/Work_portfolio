@@ -5,22 +5,31 @@ type HeaderType = {
 };
 interface MenuProps {
   title: string;
-  url: string;
+  menuLink: string;
 }
 
 const Header = ({ name }: HeaderType) => {
   const menu: MenuProps[] = [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/about" },
-    {title: "Projects", url: "/projects" },
-    { title: "Skills", url: "/skills" },
-    { title: "Experience", url: "/experience" },
-    { title: "Testimonials", url: "/testimonials" },
-    { title: "Volunteer", url: "/volunteer" },
-    { title: "Contact", url: "/contact" },
+    { title: "Home", menuLink: "#home" },
+    { title: "About", menuLink: "#about" },
+    {title: "Projects", menuLink: "#projects" },
+    { title: "Skills", menuLink: "#skills" },
+    { title: "Experience", menuLink: "#experience" },
+    { title: "Testimonials", menuLink: "#testimonials" },
+    { title: "Volunteer", menuLink: "#volunteer" },
+    { title: "Contact", menuLink: "#contact" },
   ];
+
+  // scroll to section when clicked 
+const handleMenuClick = (menuLink :string)=>{
+  const section = document.querySelector(menuLink);
+  if(section){
+    section.scrollIntoView({behavior: "smooth"});
+  }
+}
+
   return (
-    <main className="flex flex-col md:flex-row justify-between items-center shadow p-4 md:px-8 animate-fade-in">
+    <main className="fixed w-full z-10 bg-white flex flex-col md:flex-row justify-between items-center shadow p-4 md:px-8 animate-fade-in">
       <div className="ml-2 flex items-center gap-4 transition-smooth">
         <img
           src={logo}
@@ -36,7 +45,11 @@ const Header = ({ name }: HeaderType) => {
         {menu.map((item, index) => (
           <a
             key={index}
-            href={item.url}
+            href={item.menuLink}
+            onClick={(e) => {
+              e.preventDefault();
+              handleMenuClick(item.menuLink);
+            }}
             className="px-3 py-2 text-lg hover:text-fuchsia-950 inline-block transition-smooth hover:scale-105 relative group"
           >
             {item.title}

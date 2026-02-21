@@ -89,7 +89,7 @@ const Volunteer = () => {
   // }, []);
 
   return (
-    <main className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-12 px-4">
+    <main id="volunteer" className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-12 px-4">
       <p className="text-gray-500">
         How I lead and make impact across various fields
       </p>

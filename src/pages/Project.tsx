@@ -41,7 +41,7 @@ export default function Project() {
   ];
 
   return (
-    <main className="reveal flex flex-col justify-center items-center m-15 animate-fade-in">
+    <main  id="projects" className="reveal flex flex-col justify-center items-center m-15 animate-fade-in">
       <p className="mt-10 text-gray-500 animate-slide-down">
         Here are some of my projects.
       </p>

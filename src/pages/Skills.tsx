@@ -46,7 +46,7 @@ const Skills = () => {
     },
   ];
   return (
-    <main className="reveal flex flex-col justify-center items-center m-15 animate-fade-in">
+    <main id="skills" className="reveal flex flex-col justify-center items-center m-15 animate-fade-in">
       <p className="text-gray-500 animate-slide-down">
         These are the skills I have
       </p>

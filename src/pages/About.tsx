@@ -14,7 +14,7 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main className="reveal flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
+    <main id="about" className="reveal flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
       <p className="text-gray-500 animate-slide-down">Get to know me</p>
       <h1
         className="font-bold text-4xl animate-slide-down"
@@ -27,7 +27,7 @@ const About = () => {
           <img
             src={aboutimg}
             alt="Chidinma"
-            className="rounded-md w-full lg:h-full object-cover transition-smooth hover:scale-105 hover:shadow-2xl"
+            className="rounded-md w-full lg:h-full object-cover transition-smooth hover:scale-105 "
           />
           <h2 className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 text-center text-6xl font-bold text-outline drop-shadow">
             WHO IS CHIDINMA NWAEZE ?
@@ -78,7 +78,7 @@ const About = () => {
               Hire Me
               <Briefcase />
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:text-white hover:shadow-lg">
+            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:text-white hover:shadow-lg hover:border-fuchsia-950">
               Download CV
               <Download />
             </button>

@@ -13,6 +13,7 @@ import Testimonials from "../components/Testimonials";
 import Volunteer from "../components/Volunteer";
 import Experience from "../components/Experience";
 import Contact from "./Contact";
+import { Link } from "react-router-dom";
 
 // interface HomeProps {
 //   heading: string;
@@ -40,7 +41,7 @@ const Home = () => {
   ];
   return (
     <>
-      <main className="reveal hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
+      <main id= "home" className="reveal hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 pt-80 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
         <section className="reveal max-w-2xl text-center md:text-left animate-slide-left">
           <span className="text-shadow text-xl flex items-center gap-4 justify-center md:justify-start animate-fade-in">
             <p className="hi text-2xl">Hi There ...</p>
@@ -86,9 +87,11 @@ const Home = () => {
             className="flex justify-center md:justify-start animate-fade-in"
             style={{ animationDelay: "0.8s" }}
           >
-            <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition-smooth hover:scale-105 hover:shadow-lg font-bold">
-              Contact Me <ArrowUpRight />
-            </button>
+            <Link to="#contact">
+              <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition-smooth hover:scale-105 hover:shadow-lg font-bold">
+                Contact Me <ArrowUpRight />
+              </button>
+            </Link>
           </div>
         </section>
 

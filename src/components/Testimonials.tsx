@@ -75,7 +75,7 @@ const Testimonials = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <main className="reveal flex flex-col items-center py-16 bg-gray-50">
+    <main id="testimonials" className="reveal flex flex-col items-center py-16 bg-gray-50">
       <p className="text-gray-500 animate-slide-down">
         Here's what people say about me
       </p>
