@@ -2,14 +2,14 @@
 import { UserStar } from "lucide-react";
 import mentor1 from "../assets/images/mentor 1.jpeg";
 import mentor2 from "../assets/images/mentor 2.jpeg";
-import mentor3 from "../assets/images/mentor 3.jpeg";
+// import mentor3 from "../assets/images/mentor 3.jpeg";
 import mentor6 from "../assets/images/mentor 6.jpeg";
-import pm1 from "../assets/images/pm 1.jpeg";
-import pm2 from "../assets/images/pm 2.jpeg";
+// import pm1 from "../assets/images/pm 1.jpeg";
+// import pm2 from "../assets/images/pm 2.jpeg";
 import pm3 from "../assets/images/pm 3.jpeg";
 import pm4 from "../assets/images/pm 4.jpeg";
-import pm5 from "../assets/images/pm 5.jpeg";
-import pm6 from "../assets/images/pm 6.jpeg";
+// import pm5 from "../assets/images/pm 5.jpeg";
+// import pm6 from "../assets/images/pm 6.jpeg";
 import pm7 from "../assets/images/pm 7.jpeg";
 // import { useEffect, useState, useRef, type ReactNode } from "react";
 
