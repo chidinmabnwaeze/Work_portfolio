@@ -14,7 +14,12 @@ export default function Footer() {
       <main className="reveal flex flex-col md:flex-row justify-between bg-fuchsia-950 text-white p-6 md:p-20 gap-6">
         <section className="reveal text-center md:text-left">
           <h1 className="font-bold">CHIDINMA NWAEZE</h1>
-          <p className="mt-2"></p>
+          <p
+            className="pt-2  animate-slide-up transition-smooth"
+            style={{ animationDelay: "0.4s" }}
+          >
+            A Frontend Developer Crafting Engaging Web Experiences
+          </p>
         </section>
         <section className="reveal text-center md:text-left">
           <h1 className="text-xl pb-2">Quick Links</h1>
