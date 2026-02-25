@@ -69,8 +69,7 @@ const Home = () => {
             style={{ animationDelay: "0.4s" }}
           >
             I am a software developer with experience in web technologies, cloud
-            deployment, and product development support within innovation and
-            startup environments. Skilled in React.js, JavaScript, AWS, and
+            deployment, and product development. Skilled in React.js, JavaScript, AWS, and
             system troubleshooting, with a strong interest in building scalable
             solutions and supporting technology-driven impact.
           </p>
