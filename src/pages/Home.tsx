@@ -41,7 +41,10 @@ const Home = () => {
   ];
   return (
     <>
-      <main id= "home" className="reveal hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 pt-80 min-h-screen bg-blend-darken bg-fuchsia-950 text-white">
+      <main
+        id="home"
+        className="reveal hero flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 p-6 md:p-10 min-h-screen bg-blend-darken bg-fuchsia-950 text-white"
+      >
         <section className="reveal max-w-2xl text-center md:text-left animate-slide-left">
           <span className="text-shadow text-xl flex items-center gap-4 justify-center md:justify-start animate-fade-in">
             <p className="hi text-2xl">Hi There ...</p>
@@ -65,9 +68,11 @@ const Home = () => {
             className="pt-6 md:pt-10 animate-slide-up transition-smooth"
             style={{ animationDelay: "0.4s" }}
           >
-            I am a web developer, Frontend Developer, i specialize in ...
-            <br /> web development, Frontend Development, i specialize in
-            ...{" "}
+            I am a software developer with experience in web technologies, cloud
+            deployment, and product development support within innovation and
+            startup environments. Skilled in React.js, JavaScript, AWS, and
+            system troubleshooting, with a strong interest in building scalable
+            solutions and supporting technology-driven impact.
           </p>
 
           <span

@@ -3,6 +3,7 @@ import project2 from "../assets/Screenshot 2026-01-22 215432.png";
 import attendance from "../assets/images/Screenshot 2026-02-25 001703.png"
 import bayzel from "../assets/images/Screenshot 2026-02-24 230420.png"
 import next from "../assets/logo/next js.jpg";
+import eduprotos from "../assets/images/eduprotos.png"
 
 interface Projects {
   img: string;
@@ -15,10 +16,10 @@ interface Projects {
 export default function Project() {
   const projects: Projects[] = [
     {
-      img: project1,
+      img: eduprotos,
       name: "EduProtos",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+        "A learning Management application where lecturers can login, upload their course content and set quiz for their students.",
       button: "",
       skills: [next],
     },

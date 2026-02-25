@@ -5,6 +5,20 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --header-height: 80px; /* matches h-20 (5rem) */
+}
+
+body {
+  padding-top: var(--header-height);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 96px; /* matches md:h-24 (6rem) */
+  }
+}
+
 @layer utilities {
   .text-outline {
     -webkit-text-stroke-width: 1.5px;

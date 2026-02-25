@@ -42,7 +42,7 @@ const Header = ({ name }: HeaderType) => {
   // }
 
   return (
-    <main className="fixed w-full z-10 bg-white flex flex-col md:flex-row justify-between items-center shadow p-4 md:px-8 animate-fade-in">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white flex flex-col md:flex-row justify-between items-center shadow p-4 md:px-8 h-20 md:h-24 animate-fade-in">
       <div className="ml-2 flex items-center gap-4 transition-smooth">
         <img
           src={logo}
@@ -81,7 +81,7 @@ const Header = ({ name }: HeaderType) => {
           </a>
         ))}
       </nav>
-    </main>
+    </header>
   );
 };
 
