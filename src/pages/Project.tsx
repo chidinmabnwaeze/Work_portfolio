@@ -4,6 +4,7 @@ import attendance from "../assets/images/Screenshot 2026-02-25 001703.png"
 import bayzel from "../assets/images/Screenshot 2026-02-24 230420.png"
 import next from "../assets/logo/next js.jpg";
 import eduprotos from "../assets/images/eduprotos.png"
+import makemaker from "../assets/images/makemaker.png"
 
 interface Projects {
   img: string;
@@ -53,6 +54,14 @@ export default function Project() {
       description:
         "A consultancy, plastic waste recycling and related services website",
       button: "https://www.bayzelintegratedservices.com/",
+      skills: [next],
+    },
+     {
+      img: makemaker,
+      name: "Make Makers",
+      description:
+        "An E-commerce store for selling 3D product design tools, filaments etc",
+      button: "https://makemaker.com.ng/",
       skills: [next],
     },
   ];
