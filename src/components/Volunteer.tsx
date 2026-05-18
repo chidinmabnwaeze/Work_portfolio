@@ -29,12 +29,13 @@ const Volunteer = () => {
       duration: "1-01-2023",
       content: (
         <>
-          "As a mentor in the technovation girls, I focus on delivering scalable
-          solutions with strong attention to performance, SEO, and brand
-          compliance. Currently at Innov8 Hub, I collaborate across teams to
-          manage website development, server migrations, SSL integrations, and
-          digital optimization. Beyond work, I mentor young girls in Abuja on
-          STEM, public speaking, and problem-solving aligned with the UN SDGs."
+          "As a mentor with Technovation Girls, I guide secondary school girls
+          in developing technology-based solutions that address real-world
+          challenges aligned with the United Nations Sustainable Development
+          Goals (SDGs). I support participants through ideation, teamwork,
+          prototyping, pitching, and public speaking, helping them build
+          confidence, leadership, and problem-solving skills while encouraging
+          more girls to pursue careers in science and technology."
         </>
       ),
       image: [mentor1, mentor2, mentor6],
@@ -45,15 +46,16 @@ const Volunteer = () => {
       duration: "1-01-2023",
       content: (
         <>
-          "As a mentor in the technovation girls, I focus on delivering scalable
-          solutions with strong attention to performance, SEO, and brand
-          compliance. Currently at Innov8 Hub, I collaborate across teams to
-          manage website development, server migrations, SSL integrations, and
-          digital optimization. Beyond work, I mentor young girls in Abuja on
-          STEM, public speaking, and problem-solving aligned with the UN SDGs."
+          "At Innov8Hub, I serve as the Acting Head of Department and Project
+          Manager, where I oversee digital projects, coordinate teams, manage
+          timelines, and ensure successful execution of technology initiatives.
+          My role includes supervising website development and optimization,
+          managing project workflows, collaborating with stakeholders,
+          supporting innovation programs, and driving operational efficiency
+          within the organization."
         </>
       ),
-      image: [pm4, pm7,pm3],
+      image: [pm4, pm7, pm3],
     },
     {
       title: "Member",
@@ -61,12 +63,12 @@ const Volunteer = () => {
       duration: "1-01-2023 till date",
       content: (
         <>
-          "As a mentor in the technovation girls, I focus on delivering scalable
-          solutions with strong attention to performance, SEO, and brand
-          compliance. Currently at Innov8 Hub, I collaborate across teams to
-          manage website development, server migrations, SSL integrations, and
-          digital optimization. Beyond work, I mentor young girls in Abuja on
-          STEM, public speaking, and problem-solving aligned with the UN SDGs."
+          "I am also an active member of Rotaract, where I contribute to
+          community development, youth empowerment, leadership, and
+          service-oriented initiatives aimed at creating positive social impact.
+          Through volunteering and collaborative projects, I continue to support
+          initiatives that promote education, personal growth, and sustainable
+          community development."
         </>
       ),
     },
@@ -89,7 +91,10 @@ const Volunteer = () => {
   // }, []);
 
   return (
-    <main id="volunteer" className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-12 px-4">
+    <main
+      id="volunteer"
+      className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-12 px-4"
+    >
       <p className="text-gray-500">
         How I lead and make impact across various fields
       </p>

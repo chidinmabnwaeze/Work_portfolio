@@ -14,6 +14,7 @@ import Volunteer from "../components/Volunteer";
 import Experience from "../components/Experience";
 import Contact from "./Contact";
 import { Link } from "react-router-dom";
+import Brands from "./Brands";
 
 // interface HomeProps {
 //   heading: string;
@@ -91,7 +92,7 @@ const Home = () => {
             className="flex justify-center md:justify-start animate-fade-in"
             style={{ animationDelay: "0.8s" }}
           >
-            <Link to="#contact">
+            <Link to="/#contact">
               <button className="p-4 mt-4 bg-purple-600 rounded flex items-center gap-2 hover:bg-white hover:text-fuchsia-950 transition-smooth hover:scale-105 hover:shadow-lg font-bold">
                 Contact Me <ArrowUpRight />
               </button>
@@ -113,6 +114,7 @@ const Home = () => {
       <Project />
       <Skills />
       <Experience />
+      <Brands/>
       <Testimonials />
       <Volunteer />
       <Contact />

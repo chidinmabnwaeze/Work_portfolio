@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import ham from "../assets/images/Hamilton.jpg";
+import make from "../assets/logo/cropped-LOGO-removebg-preview-42x33.png";
+import bayzel from "../assets/logo/bayzel-cropped-logo.png"
 import evan from "../assets/images/image.png";
 
 interface Review {
@@ -11,50 +12,95 @@ interface Review {
 
 const Testimonials = () => {
   const reviews: Review[] = [
+    // {
+    //   name: "Everistus Nwogo",
+    //   avatar: evan,
+    //   role: "Senior AI and Software Engineer",
+    //   content: (
+    //     <p>
+    //       I highly recommend Chidinma Nwaeze, whom I mentored during her
+    //       impressive three-month internship. Chidinma's exceptional talent spans
+    //       across front-end development and UI/UX design, showcasing exceptional
+    //       communication, teamwork, and problem-solving skills. Chidinma's
+    //       expertise in front-end development and UI/UX design is commendable.
+    //       She consistently delivered high-quality work with precision and
+    //       creativity.
+    //       <br />
+    //       <br />
+    //       As her mentor, I witnessed Chidinma's collaborative spirit and
+    //       positive attitude, contributing effectively to team discussions and
+    //       achieving project goals seamlessly. Chidinma's problem-solving skills
+    //       are remarkable, making her a valuable asset to any project or team. In
+    //       summary, Chidinma Nwaeze is exceptionally talented. It was a pleasure
+    //       to mentor her, and I am confident in her continued success.
+    //     </p>
+    //   ),
+    // },
     {
-      name: "Everistus Nwogo",
-      avatar: evan,
-      role: "Senior AI and Software Engineer",
+      name: "James Ibekason",
+      avatar: make,
+      role: "CEO, Make Maker",
       content: (
         <p>
-          I highly recommend Chidinma Nwaeze, whom I mentored during her
-          impressive three-month internship. Chidinma's exceptional talent spans
-          across front-end development and UI/UX design, showcasing exceptional
-          communication, teamwork, and problem-solving skills. Chidinma's
-          expertise in front-end development and UI/UX design is commendable.
-          She consistently delivered high-quality work with precision and
-          creativity.
-          <br />
-          <br />
-          As her mentor, I witnessed Chidinma's collaborative spirit and
-          positive attitude, contributing effectively to team discussions and
-          achieving project goals seamlessly. Chidinma's problem-solving skills
-          are remarkable, making her a valuable asset to any project or team. In
-          summary, Chidinma Nwaeze is exceptionally talented. It was a pleasure
-          to mentor her, and I am confident in her continued success.
+          Working with Chidinma was a seamless and highly professional
+          experience from start to finish. She demonstrated a deep understanding
+          of both user needs and business goals, translating ideas into a clean,
+          intuitive, and visually compelling website. What stood out most was
+          her professionalism—clear communication, a structured workflow, and a
+          proactive approach to feedback made the entire process smooth and
+          stress-free. Every milestone was delivered on time, without
+          compromising on quality, which is rare and deeply appreciated. The
+          final product exceeded expectations. The design is not only
+          aesthetically strong but also highly functional and user-friendly,
+          reflecting her strong attention to detail and genuine commitment to
+          excellence. I would confidently recommend Chidinma to anyone looking
+          for a reliable, skilled, and detail-oriented UI/UX designer who
+          consistently delivers high-quality work on schedule.
         </p>
       ),
     },
     {
-      name: "ONISODUMEYA HAMILTON",
-      avatar: ham,
-      role: "STEM Instructor",
+      name: "Basil Nwankpa",
+      avatar: bayzel,
+      role: "CEO, Bayzel Integrated Services",
       content: (
         <p>
-          As a. technical training manager at the CyberSchool Africa digital
-          skills training funded by the world bank group in alliance with
-          Gallery of Code and Alden Telecommunications, I watch with keen
-          interest the students who made sacrificial efforts to go beyond the
-          tides and Chidinma Nwaeze was one of them, she had excellent
-          performance in her practical projects as well as been punctual to
-          workshops while undergoing her voluntary military training in Nigeria.
-          I also saw her delivery excellent documentations for projects in firms
-          within short notices. she is a very proactive person in terms of
-          creativity and seeking mentorship for enhanced quality delivery in her
-          services.
+          One thing I appreciated about working with Chidinma was how invested
+          she was in the project like it was her own. She brought structure,
+          ideas, and clarity to what initially felt overwhelming for us. Every
+          stage of the website development was handled with professionalism and
+          care. She was very intentional about creating a website that was not
+          just visually appealing but also easy to navigate and practical for
+          our users. Even after delivery, she remained available for support,
+          updates, and improvements, which showed her commitment to quality and
+          client satisfaction. The entire experience was smooth, collaborative,
+          and stress-free. If you need someone who combines technical skill with
+          creativity and reliability, Chidinma is definitely someone I would
+          recommend.
         </p>
       ),
     },
+    // {
+    //   name: "Peter Damilare",
+    //   avatar: "",
+    //   role: "Senior Software Engineer, Innov8 Hub",
+    //   content: (
+    //     <p>
+    //       She is highly intelligent and consistently delivers outstanding
+    //       results. Her ability to meet deadlines often completing tasks well
+    //       ahead of schedule is impressive. She approaches every project with
+    //       dedication, attention to detail, and a strong commitment to
+    //       excellence. Working with her guarantees quality, efficiency, and
+    //       reliability. I highly recommend her for any task requiring
+    //       professionalism and top-tier performance. We collaborated on several
+    //       projects, and her contributions were always invaluable. Her work
+    //       ethic, creativity, and problem-solving skills make her an asset to any
+    //       team or project. I have no doubt that she will continue to excel in
+    //       her career and deliver exceptional results in all her future
+    //       endeavors.
+    //     </p>
+    //   ),
+    // },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,7 +121,10 @@ const Testimonials = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <main id="testimonials" className="reveal flex flex-col items-center py-16 bg-gray-50">
+    <main
+      id="testimonials"
+      className="reveal flex flex-col items-center py-16 bg-gray-50"
+    >
       <p className="text-gray-500 animate-slide-down">
         Here's what people say about me
       </p>

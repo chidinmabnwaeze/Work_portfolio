@@ -165,3 +165,21 @@ body {
     opacity: 1 !important;
   }
 }
+
+.marquee {
+  animation: scroll 15s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}

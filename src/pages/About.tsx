@@ -7,8 +7,8 @@ type Metrics = {
 };
 const metrics: Metrics[] = [
   { figure: 3, name: "Organizations" },
-  { figure: 5, name: "Projects" },
-  { figure: 6, name: "Testimonials" },
+  { figure: 6, name: "Projects" },
+  { figure: 3, name: "Testimonials" },
   // { figure: 90, name: "Satisfactory Rate" },
 ];
 
