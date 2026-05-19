@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import make from "../assets/logo/cropped-LOGO-removebg-preview-42x33.png";
 import bayzel from "../assets/logo/bayzel-cropped-logo.png"
-import evan from "../assets/images/image.png";
+// import evan from "../assets/images/image.png";
 
 interface Review {
   name: string;
