@@ -5,6 +5,7 @@ import js from "../assets/logo/javascript-logo-png_seeklogo-255387.png";
 import ts from "../assets/logo/Typescript_logo_2020.svg.webp";
 import vite from "../assets/logo/Vitejs-logo.svg.webp";
 import mongodb from "../assets/logo/png-transparent-mongodb-plain-wordmark-logo-icon.png";
+import cpanel from "../assets/logo/cpanel.svg";
 
 // interface logos {
 // name: string,
@@ -41,8 +42,8 @@ const Skills = () => {
       logo: mongodb,
     },
     {
-      name: "CPanel",
-      logo: aws,
+      name: "cPanel",
+      logo: cpanel,
     },
   ];
   return (

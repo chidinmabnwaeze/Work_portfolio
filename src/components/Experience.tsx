@@ -26,7 +26,7 @@ const Experience = () => {
     {
       role: "Frontend Developer",
       org: "Gallery Of Code",
-      date: "Feburary 2024 - May 2024",
+      date: "February 2024 - May 2024",
     },
   ];
   return (
