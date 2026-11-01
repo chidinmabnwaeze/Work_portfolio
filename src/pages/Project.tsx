@@ -3,8 +3,10 @@ import project2 from "../assets/Screenshot 2026-01-22 215432.png";
 import attendance from "../assets/images/Screenshot 2026-02-25 001703.png"
 import bayzel from "../assets/images/Screenshot 2026-02-24 230420.png"
 import next from "../assets/logo/next js.jpg";
+import react from "../assets/logo/React-icon.svg.png";
 import eduprotos from "../assets/images/eduprotos.png"
 import makemaker from "../assets/images/makemaker.png"
+import tradeconnect from "../assets/logo/Logo-tradeconnect.png"
 
 interface Projects {
   img: string;
@@ -24,14 +26,22 @@ export default function Project() {
       button: "",
       skills: [next],
     },
-    {
-      img: attendance,
-      name: "Attendance Clocking System",
+     {
+      img: tradeconnect,
+      name: "Tradeconnect",
       description:
-        "An attendance clocking system that records when a user clocks in in the timesheet, display live time and date , and calculates payroll based on attendance.",
-      button: "https://attendance-system-xi-blush.vercel.app/",
-      skills: [next],
+        "A digital marketplace for farmers to connect with buyers and sell their farm produce online. It provides a platform for farmers to showcase their products, connect with potential buyers, and facilitate transactions. Buyers can browse through a wide range of agricultural products, place orders, and make payments securely, They can also send complaints called disputes in the app ,to the platform administrators if any.",
+      button: "https://www.tradeconnectmarket.com/",
+      skills: [react],
     },
+    // {
+    //   img: attendance,
+    //   name: "Attendance Clocking System",
+    //   description:
+    //     "An attendance clocking system that records when a user clocks in in the timesheet, display live time and date , and calculates payroll based on attendance.",
+    //   button: "https://attendance-system-xi-blush.vercel.app/",
+    //   skills: [next],
+    // },
     {
       img: project2,
       name: "Communiti by Innov8",

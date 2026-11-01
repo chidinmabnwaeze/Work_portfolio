@@ -1,6 +1,10 @@
 import make from "../assets/logo/cropped-LOGO-removebg-preview-42x33.png";
 import bayzel from "../assets/logo/bayzel-cropped-logo.png";
 import navecrest from "../assets/logo/navecrest.png";
+import innov8 from "../assets/logo/cropped-Innov8-LOGO.png";
+import skillg from "../assets/logo/Skill-G-logo.png";
+import ifair from "../assets/logo/I-FAIR-LOGO-White-Border.webp";
+import communiti from "../assets/logo/Communiti-by-Innov8-Logo.png";
 
 const Brands = () => {
   const brands = [
@@ -9,12 +13,28 @@ const Brands = () => {
       logo: make,
     },
     {
-      name: "Bayzel",
+      name: "Bayzel Integrated Services",
       logo: bayzel,
     },
     {
       name: "Navecrest",
       logo: navecrest,
+    },
+      {
+      name: "Innov8 Hub",
+      logo: innov8,
+    },
+      {
+      name: "Skill G Group",
+      logo: skillg,
+    },
+      {
+      name: "i-Fair Nigeria",
+      logo: ifair,
+    },
+      {
+      name: "Communiti by Innov8",
+      logo: communiti,
     },
   ];
 
