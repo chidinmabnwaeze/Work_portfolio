@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import make from "../assets/logo/cropped-LOGO-removebg-preview-42x33.png";
-import bayzel from "../assets/logo/bayzel-cropped-logo.png"
+import bayzel from "../assets/logo/bayzel-cropped-logo.webp"
 // import evan from "../assets/images/image.png";
 
 interface Review {
@@ -105,6 +105,7 @@ const Testimonials = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef(0);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % reviews.length);
@@ -114,16 +115,24 @@ const Testimonials = () => {
     setCurrentSlide((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
   }, [reviews.length]);
 
+  // Touch screens can't pause on hover, so slides only change on swipe or tap there
   useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(nextSlide, 3000);
+    if (isPaused || window.matchMedia("(hover: none)").matches) return;
+    const interval = setInterval(nextSlide, 8000);
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
+
+  const handleSwipe = (endX: number) => {
+    const distance = endX - touchStartX.current;
+    if (Math.abs(distance) < 50) return;
+    if (distance < 0) nextSlide();
+    else prevSlide();
+  };
 
   return (
     <main
       id="testimonials"
-      className="reveal flex flex-col items-center py-16 bg-gray-50"
+      className="reveal flex flex-col items-center py-16 px-4 bg-gray-50"
     >
       <p className="text-gray-500 animate-slide-down">
         Here's what people say about me
@@ -136,39 +145,57 @@ const Testimonials = () => {
       </h1>
 
       <div
-        className="relative max-w-4xl w-full bg-white shadow-lg rounded-2xl p-10"
+        className="relative max-w-4xl w-full bg-white shadow-lg rounded-2xl p-6 md:px-16 md:py-10"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={(e) => {
+          touchStartX.current = e.touches[0].clientX;
+        }}
+        onTouchEnd={(e) => handleSwipe(e.changedTouches[0].clientX)}
       >
-        {/* Slide */}
-        <div className="transition-all duration-500 ease-in-out">
-          {reviews[currentSlide].avatar && (
-            <img
-              src={reviews[currentSlide].avatar}
-              alt={reviews[currentSlide].name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4"
-            />
-          )}
-          {reviews[currentSlide].content}
-          <div className="mt-4">
-            <strong>{reviews[currentSlide].name}</strong>
-            <p className="text-gray-600">{reviews[currentSlide].role}</p>
-          </div>
+        {/* Slides share one grid cell so the card keeps the tallest slide's height */}
+        <div className="grid">
+          {reviews.map((review, index) => (
+            <div
+              key={review.name}
+              aria-hidden={index !== currentSlide}
+              className={`col-start-1 row-start-1 transition-all duration-500 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0 invisible"}`}
+            >
+              {review.avatar && (
+                <img
+                  src={review.avatar}
+                  alt={review.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full mb-4"
+                />
+              )}
+              {review.content}
+              <div className="mt-4">
+                <strong>{review.name}</strong>
+                <p className="text-gray-600">{review.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-2xl"
-        >
-          ‹
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 text-2xl"
-        >
-          ›
-        </button>
+        {/* Buttons sit under the text on small screens, at the card edges from md up */}
+        <div className="flex justify-center gap-4 mt-4 md:contents">
+          <button
+            onClick={prevSlide}
+            aria-label="Previous testimonial"
+            className="w-11 h-11 flex items-center justify-center text-2xl cursor-pointer md:absolute md:left-3 md:top-1/2 md:-translate-y-1/2"
+          >
+            ‹
+          </button>
+          <button
+            onClick={nextSlide}
+            aria-label="Next testimonial"
+            className="w-11 h-11 flex items-center justify-center text-2xl cursor-pointer md:absolute md:right-3 md:top-1/2 md:-translate-y-1/2"
+          >
+            ›
+          </button>
+        </div>
       </div>
     </main>
   );

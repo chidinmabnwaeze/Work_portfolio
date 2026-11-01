@@ -11,7 +11,7 @@ export default function Footer() {
   const date = new Date();
   return (
     <>
-      <main className="reveal flex flex-col md:flex-row justify-between bg-fuchsia-950 text-white p-6 md:p-20 gap-6">
+      <main className="reveal flex flex-col md:flex-row justify-between bg-fuchsia-950 text-white p-6 md:p-10 lg:p-20 gap-6">
         <section className="reveal text-center md:text-left">
           <h1 className="font-bold">CHIDINMA NWAEZE</h1>
           <p
@@ -25,13 +25,19 @@ export default function Footer() {
           <h1 className="text-xl pb-2">Quick Links</h1>
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="#home" className="inline-block py-2">
+                Home
+              </a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="#about" className="inline-block py-2">
+                About
+              </a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="#contact" className="inline-block py-2">
+                Contact
+              </a>
             </li>
           </ul>
         </section>
@@ -40,16 +46,24 @@ export default function Footer() {
           <ul>
             <li className="flex items-center justify-center md:justify-start">
               <PhoneCall width={20} />
-              <span className="px-3">08027966117</span>
+              <a href="tel:+2348027966117" className="px-3 py-2">
+                08027966117
+              </a>
             </li>
             <li className="flex items-center justify-center md:justify-start">
               <Mail width={20} />
-              <span className="px-3">chidinmabnwaeze@gmail.com</span>
+              <a href="mailto:chidinmabnwaeze@gmail.com" className="px-3 py-2">
+                chidinmabnwaeze@gmail.com
+              </a>
             </li>
           </ul>
           <div className="social pt-3">
-            <a href="">
-              <Linkedin />{" "}
+            <a
+              href=""
+              aria-label="LinkedIn"
+              className="inline-flex items-center justify-center w-11 h-11"
+            >
+              <Linkedin />
             </a>
           </div>
         </section>

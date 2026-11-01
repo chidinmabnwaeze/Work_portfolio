@@ -1,16 +1,16 @@
 // import evan from "../assets/images/image.png";
 import { UserStar } from "lucide-react";
-import mentor1 from "../assets/images/mentor 1.jpeg";
-import mentor2 from "../assets/images/mentor 2.jpeg";
+import mentor1 from "../assets/images/mentor 1.webp";
+import mentor2 from "../assets/images/mentor 2.webp";
 // import mentor3 from "../assets/images/mentor 3.jpeg";
-import mentor6 from "../assets/images/mentor 6.jpeg";
+import mentor6 from "../assets/images/mentor 6.webp";
 // import pm1 from "../assets/images/pm 1.jpeg";
 // import pm2 from "../assets/images/pm 2.jpeg";
-import pm3 from "../assets/images/pm 3.jpeg";
-import pm4 from "../assets/images/pm 4.jpeg";
+import pm3 from "../assets/images/pm 3.webp";
+import pm4 from "../assets/images/pm 4.webp";
 // import pm5 from "../assets/images/pm 5.jpeg";
 // import pm6 from "../assets/images/pm 6.jpeg";
-import pm7 from "../assets/images/pm 7.jpeg";
+import pm7 from "../assets/images/pm 7.webp";
 // import { useEffect, useState, useRef, type ReactNode } from "react";
 
 interface VolunteerProps {
@@ -95,10 +95,10 @@ const Volunteer = () => {
       id="volunteer"
       className="volunteer-container flex flex-col justify-center items-center max-w-5xl mx-auto py-12 px-4"
     >
-      <p className="text-gray-500">
+      <p className="text-gray-500 text-center">
         How I lead and make impact across various fields
       </p>
-      <h1 className="font-bold text-4xl">Volunteering & Leadership</h1>
+      <h1 className="font-bold text-4xl text-center">Volunteering & Leadership</h1>
       <section className="w-full">
         {volunteer.map((item, idx) => (
           <div
@@ -114,13 +114,15 @@ const Volunteer = () => {
             <p className="my-5">{item.content}</p>
 
             {item.image && (
-              <div className="gallery flex flex-wrap my-5 justify-center md:justify-start">
+              <div className="gallery grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 my-5">
                 {item.image.map((img, imgIdx) => (
                   <img
                     key={imgIdx}
                     src={img}
                     alt="volunteer images"
-                    className="w-40 h-40 md:w-60 md:h-60 rounded-xl m-3 object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full aspect-square first:col-span-2 first:aspect-video md:first:col-span-1 md:first:aspect-square rounded-xl object-cover"
                   />
                 ))}
               </div>

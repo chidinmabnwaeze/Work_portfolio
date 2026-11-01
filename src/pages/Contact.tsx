@@ -1,43 +1,51 @@
 import { ArrowUpRight } from "lucide-react";
-import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-removebg-preview.png";
+import contactImg from "../assets/images/5d20d864-9cde-452a-b136-733fd2bbc3c1-removebg-preview.webp";
 
 export default function Contact() {
   return (
     <main
     id="contact"
-      className="reveal flex flex-col justify-center items-center my-15 min-h-screen bg-cover bg-center relative "
+      className="reveal flex flex-col justify-center items-center my-15 px-4 min-h-screen bg-cover bg-center relative "
       style={{
         backgroundImage: `url(${contactImg})`,
       }}
     >
       <div className="absolute inset-0 bg-white/75"></div>
-      <div className="relative z-10 min-w-2xl flex flex-col justify-center items-center">
+      <div className="relative z-10 w-full max-w-2xl flex flex-col justify-center items-center">
         <p className="mt-10 text-gray-500">Get in Touch</p>
         <h1 className="font-bold text-4xl">Contact</h1>
 
         <form
           action=""
-          className="border border-gray-200 rounded-xl p-8 w-full my-8 bg-white"
+          className="border border-gray-200 rounded-xl p-5 sm:p-8 w-full my-8 bg-white"
         >
-          <div className="flex flex-col gap-2 my-7">
+          <div className="flex flex-col gap-2 my-5 sm:my-7">
             <label htmlFor="name">Full Name</label>
             <input
+              id="name"
+              name="name"
               type="text"
+              autoComplete="name"
               placeholder="Enter your full name"
               className="border border-gray-300 rounded p-4 focus-visible:bg-fuchsia-50 focus:border-fuchsia-200  focus:outline-0"
             />
           </div>
-          <div className="flex flex-col gap-2 my-7">
+          <div className="flex flex-col gap-2 my-5 sm:my-7">
             <label htmlFor="email">Email Address</label>
             <input
-              type="text"
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
               placeholder="Enter your email address"
               className="border border-gray-300 rounded p-4 focus-visible:bg-fuchsia-50 focus:border-fuchsia-200  focus:outline-0"
             />
           </div>
-          <div className="flex flex-col gap-2 my-7">
-            <label htmlFor="name">Your Message</label>
+          <div className="flex flex-col gap-2 my-5 sm:my-7">
+            <label htmlFor="message">Your Message</label>
             <textarea
+              id="message"
+              name="message"
               rows={4}
               placeholder="Send me a message"
               className="border border-gray-300 rounded p-4 focus-visible:bg-fuchsia-50 focus:border-fuchsia-200  focus:outline-0"

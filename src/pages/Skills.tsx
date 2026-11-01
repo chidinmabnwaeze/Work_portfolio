@@ -1,9 +1,9 @@
 import next from "../assets/logo/next js.jpg";
-import react from "../assets/logo/React-icon.svg.png";
-import aws from "../assets/logo/Amazon_Web_Services-Logo.wine.png";
+import react from "../assets/logo/React-icon.svg.webp";
+import aws from "../assets/logo/Amazon_Web_Services-Logo.wine.webp";
 import js from "../assets/logo/javascript-logo-png_seeklogo-255387.png";
-import ts from "../assets/logo/Typescript_logo_2020.svg.png";
-import vite from "../assets/logo/Vitejs-logo.svg.png";
+import ts from "../assets/logo/Typescript_logo_2020.svg.webp";
+import vite from "../assets/logo/Vitejs-logo.svg.webp";
 import mongodb from "../assets/logo/png-transparent-mongodb-plain-wordmark-logo-icon.png";
 
 // interface logos {
@@ -46,7 +46,7 @@ const Skills = () => {
     },
   ];
   return (
-    <main id="skills" className="reveal flex flex-col justify-center items-center m-15 animate-fade-in">
+    <main id="skills" className="reveal flex flex-col justify-center items-center my-15 mx-4 md:mx-8 xl:mx-15 animate-fade-in">
       <p className="text-gray-500 animate-slide-down">
         These are the skills I have
       </p>
@@ -57,8 +57,8 @@ const Skills = () => {
         My Skills
       </h1>
 
-      <section className="flex flex-col items-center gap-10 my-10 w-full px-4">
-        <div className="metrics grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10 w-full max-w-4xl">
+      <section className="flex flex-col items-center gap-10 my-6 md:my-10 w-full">
+        <div className="metrics grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 md:mt-10 w-full max-w-4xl">
           {logos.map((item, index) => (
             <div
               key={index}
@@ -68,7 +68,9 @@ const Skills = () => {
               <img
                 src={item.logo}
                 alt={item.name}
-                className="w-10 transition-smooth hover:scale-125"
+                loading="lazy"
+                decoding="async"
+                className="w-10 h-10 object-contain transition-smooth hover:scale-125"
               />
               <p className="text-lg mt-2 text-center transition-smooth text-gray-700">
                 {item.name}

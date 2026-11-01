@@ -1,22 +1,24 @@
 
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
   --header-height: 80px; /* matches h-20 (5rem) */
 }
 
-body {
-  padding-top: var(--header-height);
+@media (min-width: 768px) {
+  :root {
+    --header-height: 96px; /* matches md:h-24 (6rem) */
+  }
 }
 
-@media (min-width: 768px) {
-  body {
-    padding-top: 96px; /* matches md:h-24 (6rem) */
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height); /* keeps anchors clear of the fixed header */
+}
+
+body {
+  padding-top: var(--header-height);
+  overflow-x: clip; /* the slide-in animations start off to the side */
 }
 
 @layer utilities {
@@ -33,9 +35,16 @@ body {
 }
 
 .hero {
-  background-image: url('./assets/images/OQCI8I0.jpg');
+  background-image: url('./assets/images/OQCI8I0-800.webp');
   background-size: cover;
+  background-position: center;
   animation: fadeIn 0.8s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('./assets/images/OQCI8I0-1600.webp');
+  }
 }
 
 .chidinma, .hi{
@@ -148,6 +157,7 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
+  scroll-margin-top: 24px; /* offsets the translate so anchors land clear of the header */
   transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
   will-change: opacity, transform;
 }
@@ -163,6 +173,10 @@ body {
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+
+  .animate-marquee {
+    animation: none;
   }
 }
 
@@ -185,7 +199,7 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 12s linear infinite;
+  animation: marquee 30s linear infinite;
   display: flex;
   width: max-content;
 }

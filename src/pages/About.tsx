@@ -1,4 +1,4 @@
-import aboutimg from "../assets/images/Group 2.png";
+import aboutimg from "../assets/images/Group 2.webp";
 import { Download, Briefcase } from "lucide-react";
 
 type Metrics = {
@@ -14,7 +14,7 @@ const metrics: Metrics[] = [
 
 const About = () => {
   return (
-    <main id="about" className="reveal flex flex-col justify-center items-center my-18 px-4 md:px-0 animate-fade-in">
+    <main id="about" className="reveal flex flex-col justify-center items-center my-18 px-4 md:px-8 lg:px-0 animate-fade-in">
       <p className="text-gray-500 animate-slide-down">Get to know me</p>
       <h1
         className="font-bold text-4xl animate-slide-down"
@@ -22,23 +22,25 @@ const About = () => {
       >
         About Me
       </h1>
-      <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-20 px-4 mx-auto w-full">
-        <section className="reveal w-full lg:w-2/5 items-center relative animate-slide-left">
+      <div className="flex flex-col justify-center lg:flex-row gap-8 lg:gap-10 my-10 lg:my-20 lg:px-4 mx-auto w-full">
+        <section className="reveal w-full max-w-xl mx-auto lg:max-w-none lg:mx-0 lg:w-2/5 items-center relative animate-slide-left">
           <img
             src={aboutimg}
             alt="Chidinma"
+            loading="lazy"
+            decoding="async"
             className="rounded-md w-full lg:h-full object-cover transition-smooth hover:scale-105 "
           />
-          <h2 className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 text-center text-6xl font-bold text-outline drop-shadow">
+          <h2 className="hidden lg:block absolute inset-x-0 bottom-6 lg:bottom-8 text-center text-4xl xl:text-6xl font-bold text-outline drop-shadow">
             WHO IS CHIDINMA NWAEZE ?
           </h2>
         </section>
-        <section className="reveal mt-6 lg:mt-0 lg:ml-6 lg:max-w-2xl w-full animate-slide-right">
-          <div className="text-xl text-justify">
+        <section className="reveal lg:ml-6 lg:max-w-2xl w-full animate-slide-right">
+          <div className="text-base sm:text-lg lg:text-xl lg:text-justify">
             <span className="chidinma text-fuchsia-950 text-3xl">
               Chidinma{" "}
             </span>
-            is a passionate Frontend Web Developer with experience in building
+            is a passionate Software Developer with experience in building
             and optimizing scalable, user-friendly and impactful websites and
             digital solutions. Skilled in React.js, Vite, JavaScript, WordPress,
             Elementor, AWS, and cPanel, she brings designs to life with
@@ -52,11 +54,11 @@ const About = () => {
             <br />I thrive at the intersection of technology, education, and
             community impact, driven by the belief that digital solutions can
             transform lives and industries. I’m currently advancing my skills
-            toward becoming a Full Stack Developer, and exploring opportunities
+            toward becoming a Cloud Engineer, and exploring opportunities
             to contribute to innovative projects that require both technical
             expertise and creative problem-solving.
           </div>
-          <div className="metrics grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div className="metrics grid grid-cols-3 gap-2 sm:gap-6 mt-10">
             {metrics.map((item, index) => (
               <div
                 key={index}
@@ -66,19 +68,19 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-purple-600 hover:text-fuchsia-950 transition-smooth">
                   {item.figure}+
                 </h2>
-                <p className="text-lg transition-smooth">{item.name}</p>
+                <p className="text-sm sm:text-lg transition-smooth">{item.name}</p>
               </div>
             ))}
           </div>
           <div
-            className="buttons flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mt-10 animate-fade-in"
+            className="buttons flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-6 lg:mt-10 animate-fade-in"
             style={{ animationDelay: "0.6s" }}
           >
-            <button className="bg-purple-600 text-white p-4 rounded mr-0 sm:mr-4 flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:shadow-lg">
+            <button className="bg-purple-600 text-white p-4 rounded flex items-center justify-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:shadow-lg">
               Hire Me
               <Briefcase />
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:text-white hover:shadow-lg hover:border-fuchsia-950">
+            <button className="border-2 border-purple-600 text-purple-600 p-4 rounded flex items-center justify-center gap-2 hover:bg-fuchsia-950 transition-smooth transform hover:scale-105 hover:text-white hover:shadow-lg hover:border-fuchsia-950">
               Download CV
               <Download />
             </button>

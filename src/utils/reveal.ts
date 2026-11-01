@@ -18,7 +18,8 @@ export function initReveal() {
       });
     },
     {
-      threshold: 0.12,
+      // 0 so sections taller than the viewport still reveal on small screens
+      threshold: 0,
       rootMargin: "0px 0px -8% 0px",
     },
   );
