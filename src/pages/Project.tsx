@@ -1,6 +1,6 @@
 import project1 from "../assets/Screenshot 2026-01-22 215413.png";
 import project2 from "../assets/Screenshot 2026-01-22 215432.png";
-import attendance from "../assets/images/Screenshot 2026-02-25 001703.png"
+// import attendance from "../assets/images/Screenshot 2026-02-25 001703.png"
 import bayzel from "../assets/images/Screenshot 2026-02-24 230420.png"
 import next from "../assets/logo/next js.jpg";
 import react from "../assets/logo/React-icon.svg.png";
